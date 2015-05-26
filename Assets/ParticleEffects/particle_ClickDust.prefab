@@ -27,7 +27,6 @@ GameObject:
   - 4: {fileID: 428626}
   - 198: {fileID: 19807240}
   - 199: {fileID: 19952486}
-  - 114: {fileID: 11462490}
   m_Layer: 0
   m_Name: particle_ClickDust
   m_TagString: Untagged
@@ -60,17 +59,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 428626}
   m_RootOrder: 0
---- !u!114 &11462490
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 135706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ac535528c3aa1a4c8d3a7e4a72c1d2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!198 &19807240
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -121,7 +109,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     startSpeed:
-      scalar: 10
+      scalar: 20
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -248,7 +236,7 @@ ParticleSystem:
         rgba: 4283852914
       minMaxState: 0
     startSize:
-      scalar: 1
+      scalar: 2
       maxCurve:
         serializedVersion: 2
         m_Curve:
