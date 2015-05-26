@@ -95,7 +95,7 @@ ParticleSystem:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 175374}
-  lengthInSec: 2
+  lengthInSec: 1
   startDelay: 0
   speed: 1
   randomSeed: 0
@@ -106,7 +106,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: .5
+      scalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -139,7 +139,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     startSpeed:
-      scalar: 20
+      scalar: 10
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -469,13 +469,13 @@ ParticleSystem:
       maxGradient:
         key0:
           serializedVersion: 2
-          rgba: 515689426
+          rgba: 1019005906
         key1:
           serializedVersion: 2
-          rgba: 352321535
+          rgba: 855638015
         key2:
           serializedVersion: 2
-          rgba: 184549375
+          rgba: 687865855
         key3:
           serializedVersion: 2
           rgba: 0
@@ -601,7 +601,7 @@ ParticleSystem:
     cycles: 1
     randomRow: 1
   VelocityModule:
-    enabled: 0
+    enabled: 1
     x:
       scalar: 1
       maxCurve:
@@ -674,12 +674,12 @@ ParticleSystem:
           outSlope: 0
           tangentMode: 0
         - time: .477842957
-          value: .108830869
+          value: 1
           inSlope: 1.59829855
           outSlope: 1.59829855
           tangentMode: 0
-        - time: .956097543
-          value: -1
+        - time: .97560972
+          value: 1
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -1148,7 +1148,7 @@ ParticleSystem:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 176438}
-  lengthInSec: 2
+  lengthInSec: 1
   startDelay: 0
   speed: 1
   randomSeed: 0
@@ -1159,7 +1159,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 2
+      scalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1192,7 +1192,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     startSpeed:
-      scalar: 1
+      scalar: .5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2191,7 +2191,7 @@ ParticleSystem:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 144636}
-  lengthInSec: 2
+  lengthInSec: 1
   startDelay: 0
   speed: 1
   randomSeed: 0
@@ -2202,7 +2202,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: .5
+      scalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2235,7 +2235,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     startSpeed:
-      scalar: 20
+      scalar: 10
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2435,7 +2435,7 @@ ParticleSystem:
     enabled: 1
     type: 4
     radius: .0500000007
-    angle: 25
+    angle: 35
     length: 5
     boxX: 1
     boxY: 1
@@ -2496,12 +2496,12 @@ ParticleSystem:
       maxCurve:
         serializedVersion: 2
         m_Curve:
-        - time: 0
-          value: .595744669
+        - time: .00975609757
+          value: .361702114
           inSlope: 0
           outSlope: 0
           tangentMode: 0
-        - time: .121951193
+        - time: .482926816
           value: 1
           inSlope: 0
           outSlope: 0
@@ -2565,16 +2565,16 @@ ParticleSystem:
       maxGradient:
         key0:
           serializedVersion: 2
-          rgba: 515689426
+          rgba: 683461586
         key1:
           serializedVersion: 2
-          rgba: 352321535
+          rgba: 520093695
         key2:
           serializedVersion: 2
-          rgba: 184549375
+          rgba: 352321535
         key3:
           serializedVersion: 2
-          rgba: 0
+          rgba: 251658240
         key4:
           serializedVersion: 2
           rgba: 0
@@ -2598,13 +2598,13 @@ ParticleSystem:
         atime0: 0
         atime1: 12722
         atime2: 28527
-        atime3: 65535
+        atime3: 47031
         atime4: 65535
         atime5: 0
         atime6: 0
         atime7: 0
         m_NumColorKeys: 2
-        m_NumAlphaKeys: 4
+        m_NumAlphaKeys: 5
       minGradient:
         key0:
           serializedVersion: 2
