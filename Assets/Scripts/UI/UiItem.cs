@@ -44,7 +44,7 @@ public class UiItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
         transform.SetParent(transform.parent.parent);
         transform.GetComponent<Image>().enabled = false;
 
-        worldItem.gameObject.SetActive(true);
+        
 
         RaycastHit hitInfo;
 
@@ -58,7 +58,16 @@ public class UiItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 
     }
 
+    // fix worlditem going behind ui
     public void OnDrag(PointerEventData eventData) {
+
+        // Dont continue if clicking on ui
+        if (!EventSystem.current.IsPointerOverGameObject()) {
+            if (!worldItem.gameObject.activeSelf) {
+                worldItem.gameObject.SetActive(true);
+            }
+            //return;
+        }
 
         transform.position = eventData.position;
 
