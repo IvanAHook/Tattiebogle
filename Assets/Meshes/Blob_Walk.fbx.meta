@@ -1,0 +1,483 @@
+fileFormatVersion: 2
+guid: ddfb9ee3651227f4e8756a00d7644fd2
+timeCreated: 1431613751
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: belly_control
+    100002: belly_control_ori
+    100004: belly_scale_joint
+    100006: bind_skeleton
+    100008: blob_mesh
+    100010: //RootNode
+    100012: deforming_controllers
+    100014: down_exp_group
+    100016: forehead_control
+    100018: forehead_control_ori
+    100020: forehead_scale_joint
+    100022: head_control
+    100024: head_control_ori
+    100026: hip_control
+    100028: hip_control_ori
+    100030: ik_handles
+    100032: left_ankle_jnt_01
+    100034: left_ankle_nb_joint
+    100036: left_clavicle_joint
+    100038: left_elbow_control
+    100040: left_elbow_control_ori
+    100042: left_elbow_jnt_01
+    100044: left_exp_01_control_ori
+    100046: left_exp_02_control
+    100048: left_exp_02_control_ori
+    100050: left_exp_jnt_02
+    100052: left_eye_control
+    100054: left_eye_control_group
+    100056: left_eye_control_ori
+    100058: left_eye_jnt_01
+    100060: left_eyelid_01_control_ori
+    100062: left_eyelid_02_control_ori
+    100064: left_eyelid_03_control_ori
+    100066: left_eyelid_04_control_ori
+    100068: left_eyelid_05_control_ori
+    100070: left_eyelid_06_control_ori
+    100072: left_foot_control
+    100074: left_foot_joint
+    100076: left_hand_control
+    100078: left_hand_control_ori
+    100080: left_hand_jnt_01
+    100082: left_hip_jnt_01
+    100084: left_knee_jnt_01
+    100086: left_leg_ik_handle
+    100088: left_shoulder_control
+    100090: left_shoulder_control_ori
+    100092: left_shoulder_jnt_01
+    100094: leg_controls
+    100096: mesh_group
+    100098: middle_exp_01_control_ori
+    100100: middle_exp_02_control
+    100102: middle_exp_02_control_ori
+    100104: middle_exp_jnt_02
+    100106: pelvis_jnt_01
+    100108: rig_group
+    100110: right_ankle_jnt_01
+    100112: right_ankle_nb_joint
+    100114: right_clavicle_joint
+    100116: right_elbow_control
+    100118: right_elbow_control_ori
+    100120: right_elbow_jnt_01
+    100122: right_exp_01_control_ori
+    100124: right_exp_02_control
+    100126: right_exp_02_control_ori
+    100128: right_exp_jnt_02
+    100130: right_eye_control
+    100132: right_eye_control_group
+    100134: right_eye_control_ori
+    100136: right_eye_jnt_01
+    100138: right_eyelid_01_control_ori
+    100140: right_eyelid_02_control_ori
+    100142: right_eyelid_03_control_ori
+    100144: right_eyelid_04_control_ori
+    100146: right_eyelid_05_control_ori
+    100148: right_eyelid_06_control_ori
+    100150: right_foot_control
+    100152: right_foot_joint
+    100154: right_hand_control
+    100156: right_hand_control_ori
+    100158: right_hand_jnt_01
+    100160: right_hip_jnt_01
+    100162: right_knee_jnt_01
+    100164: right_leg_ik_handle
+    100166: right_shoulder_control
+    100168: right_shoulder_control_ori
+    100170: right_shoulder_jnt_01
+    100172: root_control
+    100174: root_control_ori
+    100176: root_jnt_01
+    100178: spine_01_control
+    100180: spine_01_control_ori
+    100182: spine_02_control
+    100184: spine_02_control_ori
+    100186: spine_jnt_01
+    100188: spine_jnt_02
+    100190: spine_jnt_03
+    100192: up_exp_group
+    400000: belly_control
+    400002: belly_control_ori
+    400004: belly_scale_joint
+    400006: bind_skeleton
+    400008: blob_mesh
+    400010: //RootNode
+    400012: deforming_controllers
+    400014: down_exp_group
+    400016: forehead_control
+    400018: forehead_control_ori
+    400020: forehead_scale_joint
+    400022: head_control
+    400024: head_control_ori
+    400026: hip_control
+    400028: hip_control_ori
+    400030: ik_handles
+    400032: left_ankle_jnt_01
+    400034: left_ankle_nb_joint
+    400036: left_clavicle_joint
+    400038: left_elbow_control
+    400040: left_elbow_control_ori
+    400042: left_elbow_jnt_01
+    400044: left_exp_01_control_ori
+    400046: left_exp_02_control
+    400048: left_exp_02_control_ori
+    400050: left_exp_jnt_02
+    400052: left_eye_control
+    400054: left_eye_control_group
+    400056: left_eye_control_ori
+    400058: left_eye_jnt_01
+    400060: left_eyelid_01_control_ori
+    400062: left_eyelid_02_control_ori
+    400064: left_eyelid_03_control_ori
+    400066: left_eyelid_04_control_ori
+    400068: left_eyelid_05_control_ori
+    400070: left_eyelid_06_control_ori
+    400072: left_foot_control
+    400074: left_foot_joint
+    400076: left_hand_control
+    400078: left_hand_control_ori
+    400080: left_hand_jnt_01
+    400082: left_hip_jnt_01
+    400084: left_knee_jnt_01
+    400086: left_leg_ik_handle
+    400088: left_shoulder_control
+    400090: left_shoulder_control_ori
+    400092: left_shoulder_jnt_01
+    400094: leg_controls
+    400096: mesh_group
+    400098: middle_exp_01_control_ori
+    400100: middle_exp_02_control
+    400102: middle_exp_02_control_ori
+    400104: middle_exp_jnt_02
+    400106: pelvis_jnt_01
+    400108: rig_group
+    400110: right_ankle_jnt_01
+    400112: right_ankle_nb_joint
+    400114: right_clavicle_joint
+    400116: right_elbow_control
+    400118: right_elbow_control_ori
+    400120: right_elbow_jnt_01
+    400122: right_exp_01_control_ori
+    400124: right_exp_02_control
+    400126: right_exp_02_control_ori
+    400128: right_exp_jnt_02
+    400130: right_eye_control
+    400132: right_eye_control_group
+    400134: right_eye_control_ori
+    400136: right_eye_jnt_01
+    400138: right_eyelid_01_control_ori
+    400140: right_eyelid_02_control_ori
+    400142: right_eyelid_03_control_ori
+    400144: right_eyelid_04_control_ori
+    400146: right_eyelid_05_control_ori
+    400148: right_eyelid_06_control_ori
+    400150: right_foot_control
+    400152: right_foot_joint
+    400154: right_hand_control
+    400156: right_hand_control_ori
+    400158: right_hand_jnt_01
+    400160: right_hip_jnt_01
+    400162: right_knee_jnt_01
+    400164: right_leg_ik_handle
+    400166: right_shoulder_control
+    400168: right_shoulder_control_ori
+    400170: right_shoulder_jnt_01
+    400172: root_control
+    400174: root_control_ori
+    400176: root_jnt_01
+    400178: spine_01_control
+    400180: spine_01_control_ori
+    400182: spine_02_control
+    400184: spine_02_control_ori
+    400186: spine_jnt_01
+    400188: spine_jnt_02
+    400190: spine_jnt_03
+    400192: up_exp_group
+    4300000: blob_mesh
+    7400000: Walkcycle
+    9500000: //RootNode
+    13700000: blob_mesh
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walkcycle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 31
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: mesh_group
+        weight: 1
+      - path: mesh_group/blob_mesh
+        weight: 1
+      - path: rig_group
+        weight: 1
+      - path: rig_group/bind_skeleton
+        weight: 1
+      - path: rig_group/bind_skeleton/root_jnt_01
+        weight: 1
+      - path: rig_group/bind_skeleton/root_jnt_01/pelvis_jnt_01
+        weight: 1
+      - path: rig_group/bind_skeleton/root_jnt_01/pelvis_jnt_01/left_hip_jnt_01
+        weight: 1
+      - path: rig_group/bind_skeleton/root_jnt_01/pelvis_jnt_01/left_hip_jnt_01/left_knee_jnt_01
+        weight: 1
+      - path: rig_group/bind_skeleton/root_jnt_01/pelvis_jnt_01/left_hip_jnt_01/left_knee_jnt_01/left_ankle_jnt_01
+        weight: 1
+      - path: rig_group/bind_skeleton/root_jnt_01/pelvis_jnt_01/left_hip_jnt_01/left_knee_jnt_01/left_ankle_jnt_01/left_ankle_nb_joint
+        weight: 1
+      - path: rig_group/bind_skeleton/root_jnt_01/pelvis_jnt_01/left_hip_jnt_01/left_knee_jnt_01/left_ankle_jnt_01/left_ankle_nb_joint/left_foot_joint
+        weight: 1
+      - path: rig_group/bind_skeleton/root_jnt_01/pelvis_jnt_01/right_hip_jnt_01
+        weight: 1
+      - path: rig_group/bind_skeleton/root_jnt_01/pelvis_jnt_01/right_hip_jnt_01/right_knee_jnt_01
+        weight: 1
+      - path: rig_group/bind_skeleton/root_jnt_01/pelvis_jnt_01/right_hip_jnt_01/right_knee_jnt_01/right_ankle_jnt_01
+        weight: 1
+      - path: rig_group/bind_skeleton/root_jnt_01/pelvis_jnt_01/right_hip_jnt_01/right_knee_jnt_01/right_ankle_jnt_01/right_ankle_nb_joint
+        weight: 1
+      - path: rig_group/bind_skeleton/root_jnt_01/pelvis_jnt_01/right_hip_jnt_01/right_knee_jnt_01/right_ankle_jnt_01/right_ankle_nb_joint/right_foot_joint
+        weight: 1
+      - path: rig_group/bind_skeleton/root_jnt_01/spine_jnt_01
+        weight: 1
+      - path: rig_group/bind_skeleton/root_jnt_01/spine_jnt_01/belly_scale_joint
+        weight: 1
+      - path: rig_group/bind_skeleton/root_jnt_01/spine_jnt_01/spine_jnt_02
+        weight: 1
+      - path: rig_group/bind_skeleton/root_jnt_01/spine_jnt_01/spine_jnt_02/left_clavicle_joint
+        weight: 1
+      - path: rig_group/bind_skeleton/root_jnt_01/spine_jnt_01/spine_jnt_02/left_clavicle_joint/left_shoulder_jnt_01
+        weight: 1
+      - path: rig_group/bind_skeleton/root_jnt_01/spine_jnt_01/spine_jnt_02/left_clavicle_joint/left_shoulder_jnt_01/left_elbow_jnt_01
+        weight: 1
+      - path: rig_group/bind_skeleton/root_jnt_01/spine_jnt_01/spine_jnt_02/left_clavicle_joint/left_shoulder_jnt_01/left_elbow_jnt_01/left_hand_jnt_01
+        weight: 1
+      - path: rig_group/bind_skeleton/root_jnt_01/spine_jnt_01/spine_jnt_02/left_exp_jnt_02
+        weight: 1
+      - path: rig_group/bind_skeleton/root_jnt_01/spine_jnt_01/spine_jnt_02/middle_exp_jnt_02
+        weight: 1
+      - path: rig_group/bind_skeleton/root_jnt_01/spine_jnt_01/spine_jnt_02/right_clavicle_joint
+        weight: 1
+      - path: rig_group/bind_skeleton/root_jnt_01/spine_jnt_01/spine_jnt_02/right_clavicle_joint/right_shoulder_jnt_01
+        weight: 1
+      - path: rig_group/bind_skeleton/root_jnt_01/spine_jnt_01/spine_jnt_02/right_clavicle_joint/right_shoulder_jnt_01/right_elbow_jnt_01
+        weight: 1
+      - path: rig_group/bind_skeleton/root_jnt_01/spine_jnt_01/spine_jnt_02/right_clavicle_joint/right_shoulder_jnt_01/right_elbow_jnt_01/right_hand_jnt_01
+        weight: 1
+      - path: rig_group/bind_skeleton/root_jnt_01/spine_jnt_01/spine_jnt_02/right_exp_jnt_02
+        weight: 1
+      - path: rig_group/bind_skeleton/root_jnt_01/spine_jnt_01/spine_jnt_02/spine_jnt_03
+        weight: 1
+      - path: rig_group/bind_skeleton/root_jnt_01/spine_jnt_01/spine_jnt_02/spine_jnt_03/forehead_scale_joint
+        weight: 1
+      - path: rig_group/bind_skeleton/root_jnt_01/spine_jnt_01/spine_jnt_02/spine_jnt_03/left_eye_jnt_01
+        weight: 1
+      - path: rig_group/bind_skeleton/root_jnt_01/spine_jnt_01/spine_jnt_02/spine_jnt_03/right_eye_jnt_01
+        weight: 1
+      - path: rig_group/ik_handles
+        weight: 1
+      - path: rig_group/ik_handles/left_leg_ik_handle
+        weight: 1
+      - path: rig_group/ik_handles/right_leg_ik_handle
+        weight: 1
+      - path: rig_group/leg_controls
+        weight: 1
+      - path: rig_group/leg_controls/left_foot_control
+        weight: 1
+      - path: rig_group/leg_controls/right_foot_control
+        weight: 1
+      - path: rig_group/root_control_ori
+        weight: 1
+      - path: rig_group/root_control_ori/root_control
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/belly_control_ori
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/belly_control_ori/belly_control
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/down_exp_group
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/down_exp_group/left_exp_02_control_ori
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/down_exp_group/left_exp_02_control_ori/left_exp_02_control
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/down_exp_group/middle_exp_02_control_ori
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/down_exp_group/middle_exp_02_control_ori/middle_exp_02_control
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/down_exp_group/right_exp_02_control_ori
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/down_exp_group/right_exp_02_control_ori/right_exp_02_control
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/head_control_ori
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/head_control_ori/head_control
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/head_control_ori/head_control/deforming_controllers
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/head_control_ori/head_control/forehead_control_ori
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/head_control_ori/head_control/forehead_control_ori/forehead_control
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/head_control_ori/head_control/left_eye_control_group
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/head_control_ori/head_control/left_eye_control_group/left_eye_control_ori
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/head_control_ori/head_control/left_eye_control_group/left_eye_control_ori/left_eye_control
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/head_control_ori/head_control/left_eye_control_group/left_eyelid_01_control_ori
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/head_control_ori/head_control/left_eye_control_group/left_eyelid_02_control_ori
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/head_control_ori/head_control/left_eye_control_group/left_eyelid_03_control_ori
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/head_control_ori/head_control/left_eye_control_group/left_eyelid_04_control_ori
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/head_control_ori/head_control/left_eye_control_group/left_eyelid_05_control_ori
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/head_control_ori/head_control/left_eye_control_group/left_eyelid_06_control_ori
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/head_control_ori/head_control/right_eye_control_group
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/head_control_ori/head_control/right_eye_control_group/right_eye_control_ori
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/head_control_ori/head_control/right_eye_control_group/right_eye_control_ori/right_eye_control
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/head_control_ori/head_control/right_eye_control_group/right_eye_control_ori/right_eyelid_01_control_ori
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/head_control_ori/head_control/right_eye_control_group/right_eye_control_ori/right_eyelid_02_control_ori
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/head_control_ori/head_control/right_eye_control_group/right_eye_control_ori/right_eyelid_03_control_ori
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/head_control_ori/head_control/right_eye_control_group/right_eye_control_ori/right_eyelid_04_control_ori
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/head_control_ori/head_control/right_eye_control_group/right_eye_control_ori/right_eyelid_05_control_ori
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/head_control_ori/head_control/right_eye_control_group/right_eye_control_ori/right_eyelid_06_control_ori
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/head_control_ori/head_control/up_exp_group
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/head_control_ori/head_control/up_exp_group/left_exp_01_control_ori
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/head_control_ori/head_control/up_exp_group/middle_exp_01_control_ori
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/head_control_ori/head_control/up_exp_group/right_exp_01_control_ori
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/left_shoulder_control_ori
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/left_shoulder_control_ori/left_shoulder_control
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/left_shoulder_control_ori/left_shoulder_control/left_elbow_control_ori
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/left_shoulder_control_ori/left_shoulder_control/left_elbow_control_ori/left_elbow_control
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/left_shoulder_control_ori/left_shoulder_control/left_elbow_control_ori/left_elbow_control/left_hand_control_ori
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/left_shoulder_control_ori/left_shoulder_control/left_elbow_control_ori/left_elbow_control/left_hand_control_ori/left_hand_control
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/right_shoulder_control_ori
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/right_shoulder_control_ori/right_shoulder_control
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/right_shoulder_control_ori/right_shoulder_control/right_elbow_control_ori
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/right_shoulder_control_ori/right_shoulder_control/right_elbow_control_ori/right_elbow_control
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/right_shoulder_control_ori/right_shoulder_control/right_elbow_control_ori/right_elbow_control/right_hand_control_ori
+        weight: 1
+      - path: rig_group/root_control_ori/root_control/hip_control_ori/hip_control/spine_01_control_ori/spine_01_control/spine_02_control_ori/spine_02_control/right_shoulder_control_ori/right_shoulder_control/right_elbow_control_ori/right_elbow_control/right_hand_control_ori/right_hand_control
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
