@@ -7,6 +7,12 @@ public class PlayerBlobMovement : MonoBehaviour {
 
     CharacterController cc;
     NavMeshAgent agent;
+
+    AudioSource audioSource;
+
+    public AudioClip[] footsteps;
+    public float footDelay;
+
     public bool active = false;
 
     public bool isMoving;
@@ -26,6 +32,8 @@ public class PlayerBlobMovement : MonoBehaviour {
 
         agent = GetComponent<NavMeshAgent>();
 
+        audioSource = transform.GetComponent<AudioSource>();
+        StartCoroutine(Footsteps());
     }
 
     public void SetDestination(Vector3 destination) {
@@ -60,6 +68,17 @@ public class PlayerBlobMovement : MonoBehaviour {
             }
         }
 
+    }
+
+    IEnumerator Footsteps() {
+        while (true) {
+            if (isMoving) {
+                audioSource.PlayOneShot(footsteps[Random.Range(0, footsteps.Length)]);
+                yield return new WaitForSeconds(footDelay);
+            } else {
+                yield return 0;
+            }
+        }
     }
 
 }

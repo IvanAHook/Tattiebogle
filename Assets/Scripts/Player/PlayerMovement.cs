@@ -7,6 +7,11 @@ public class PlayerMovement : MonoBehaviour {
     CharacterController cc;
     public NavMeshAgent agent;
 
+    AudioSource audioSource;
+
+    public AudioClip[] footsteps;
+    public float footDelay;
+
     public bool isMoving;
     public bool active = true;
 
@@ -33,6 +38,8 @@ public class PlayerMovement : MonoBehaviour {
 
         agent = GetComponent<NavMeshAgent>();
 
+        audioSource = transform.GetComponent<AudioSource>();
+        StartCoroutine(Footsteps());
     }
 
     void Update() {
@@ -42,12 +49,10 @@ public class PlayerMovement : MonoBehaviour {
         if (agent.velocity.magnitude > 1.5f) {
             if (!isMoving) {
                 isMoving = true;
-                transform.GetComponent<AudioSource>().Play();
             }
         } else {
             if (isMoving) {
                 isMoving = false;
-                transform.GetComponent<AudioSource>().Stop();
             }
         }
 
@@ -140,10 +145,21 @@ public class PlayerMovement : MonoBehaviour {
     }
     
     void PickupItem() {
-
+        hand.GetComponent<UiHand>().Show();
         hand.GetComponent<UiHand>().PickupItem(inventoryItem);
         pickup = false;
 
+    }
+
+    IEnumerator Footsteps() {
+        while (true) {
+            if (isMoving) {
+                audioSource.PlayOneShot(footsteps[Random.Range(0, footsteps.Length)]);
+                yield return new WaitForSeconds(footDelay);
+            } else {
+                yield return 0;
+            }
+        }
     }
 
 }
