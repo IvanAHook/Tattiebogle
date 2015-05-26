@@ -1,0 +1,124 @@
+fileFormatVersion: 2
+guid: 73db615c14e1045498313f19404ff534
+timeCreated: 1432301619
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: House_Base_Big
+    100004: House_Base_Big2
+    100006: House_Base_Big4
+    100008: House_Base_Big5
+    100010: polySurface34
+    100012: Shed_v4
+    100014: transform15
+    100016: Floor_v1
+    100018: Floor_v2
+    100020: Floor_v3
+    100022: Floor_v4
+    100024: Floor_v5
+    100026: Floors
+    400000: //RootNode
+    400002: House_Base_Big
+    400004: House_Base_Big2
+    400006: House_Base_Big4
+    400008: House_Base_Big5
+    400010: polySurface34
+    400012: Shed_v4
+    400014: transform15
+    400016: Floor_v1
+    400018: Floor_v2
+    400020: Floor_v3
+    400022: Floor_v4
+    400024: Floor_v5
+    400026: Floors
+    2300000: House_Base_Big
+    2300002: House_Base_Big2
+    2300004: House_Base_Big4
+    2300006: House_Base_Big5
+    2300008: polySurface34
+    2300010: Floor_v1
+    2300012: Floor_v2
+    2300014: Floor_v3
+    2300016: Floor_v4
+    2300018: Floor_v5
+    3300000: House_Base_Big
+    3300002: House_Base_Big2
+    3300004: House_Base_Big4
+    3300006: House_Base_Big5
+    3300008: polySurface34
+    3300010: Floor_v1
+    3300012: Floor_v2
+    3300014: Floor_v3
+    3300016: Floor_v4
+    3300018: Floor_v5
+    4300000: House_Base_Big
+    4300002: House_Base_Big2
+    4300004: House_Base_Big4
+    4300006: House_Base_Big5
+    4300008: polySurface34
+    4300010: Floor_v3
+    4300012: Floor_v1
+    4300014: Floor_v5
+    4300016: Floor_v2
+    4300018: Floor_v4
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
