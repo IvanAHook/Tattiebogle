@@ -92,10 +92,6 @@ Material:
         second: 0
       data:
         first:
-          name: _Metallic
-        second: 0
-      data:
-        first:
           name: _Parallax
         second: .0199999996
       data:
@@ -130,6 +126,10 @@ Material:
         first:
           name: _Mode
         second: 0
+      data:
+        first:
+          name: _Metallic
+        second: 0
     m_Colors:
       data:
         first:
@@ -138,7 +138,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .661764741, g: .361822873, b: .131379768, a: 1}
+        second: {r: .477941155, g: .305038899, b: .172199383, a: 1}
       data:
         first:
           name: _EmissionColorUI
