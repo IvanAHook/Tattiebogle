@@ -42,10 +42,12 @@ public class PlayerMovement : MonoBehaviour {
         if (agent.velocity.magnitude > 1.5f) {
             if (!isMoving) {
                 isMoving = true;
+                transform.GetComponent<AudioSource>().Play();
             }
         } else {
             if (isMoving) {
                 isMoving = false;
+                transform.GetComponent<AudioSource>().Stop();
             }
         }
 
