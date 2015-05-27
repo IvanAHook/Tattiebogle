@@ -111,7 +111,7 @@ public class PlayerGroupController : MonoBehaviour {
 
         if (Physics.Raycast(cam.ScreenPointToRay(Input.mousePosition), out hitInfo) && activePlayer == ActivePlayer.Player) {
 
-            if (hitInfo.transform.GetComponent<Pickup>()) {
+            if (hitInfo.transform.GetComponent<Pickup>() || hitInfo.transform.GetComponent<Interactable>()) {
                 Cursor.SetCursor(cursorInteract, Vector2.zero, CursorMode.Auto);
             } else {
                 Cursor.SetCursor(cursorDefault, Vector2.zero, CursorMode.Auto);

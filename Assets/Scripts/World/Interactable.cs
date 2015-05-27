@@ -7,8 +7,6 @@ public class Interactable : MonoBehaviour {
 
     public Transform interactTransform;
 
-    public Sprite sprite;
-
     void Start() {
         if (animator) {
             animator = gameObject.GetComponentInChildren<Animator>();
@@ -22,6 +20,9 @@ public class Interactable : MonoBehaviour {
         if (animator) {
             animator.SetTrigger("ClickTrigger");
         }
+    }
+
+    public void Interact() {
     }
 
     public Vector3 GetInteractPosition() {

@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour {
     bool pickup;
     bool interract;
 
+    Transform interractEnvironment;
     Transform interractActor;
 
     public Transform inventoryItem;
@@ -60,6 +61,13 @@ public class PlayerMovement : MonoBehaviour {
             UpdateInput();
         }
 
+        if (interract && interractEnvironment) {
+            if (Vector3.Distance(transform.position, agent.destination) < 2f) {
+                interractEnvironment.transform.SendMessage("Interact", SendMessageOptions.DontRequireReceiver);
+                interractEnvironment.GetComponent<Interactable>().Interact();
+                interract = false;
+            }
+        }
 
         if (interract && interractActor) {
             if (Vector3.Distance(transform.position, agent.destination) < 2f) {
@@ -100,7 +108,7 @@ public class PlayerMovement : MonoBehaviour {
                 return;
             }
 
-            if (hitInfo.transform.gameObject.layer == 8 || hitInfo.transform.gameObject.layer == 10 || hitInfo.transform.gameObject.layer == 12) {
+            if (hitInfo.transform.gameObject.layer == 8 || hitInfo.transform.gameObject.layer == 10 || hitInfo.transform.gameObject.layer == 12 || hitInfo.transform.gameObject.layer == 13) {
 
                 TargetHit(hitInfo.transform);
 
@@ -138,6 +146,9 @@ public class PlayerMovement : MonoBehaviour {
             return;
         }
         if (t.tag == "Interactable") {
+            interract = true;
+            interractEnvironment = t;
+            agent.destination = t.GetComponent<Interactable>().interactTransform.position;
             return;
         }
         pickup = false;

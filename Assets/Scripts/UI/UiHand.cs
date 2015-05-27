@@ -35,12 +35,12 @@ public class UiHand : MonoBehaviour {
         }
     }
 
-    public void DropHeldItem() {
-        if (heldItem && heldItem.GetComponent<UiItem>()) {
-            heldItem.GetComponent<UiItem>().Drop(player.transform.position);
-            Destroy(heldItem.gameObject);
-        }
-    }
+    //public void DropHeldItem() {
+    //    if (heldItem && heldItem.GetComponent<UiItem>()) {
+    //        heldItem.GetComponent<UiItem>().Drop(player.transform.position);
+    //        Destroy(heldItem.gameObject);
+    //    }
+    //}
 
     public void Show() {
         hideTimer = 0f;
