@@ -159,7 +159,6 @@ public class PlayerMovement : MonoBehaviour {
         hand.GetComponent<UiHand>().Show();
         hand.GetComponent<UiHand>().PickupItem(inventoryItem);
         pickup = false;
-
     }
 
     IEnumerator Footsteps() {

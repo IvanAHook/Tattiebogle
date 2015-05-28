@@ -6,6 +6,8 @@ public class TestFlyingLight : MonoBehaviour {
 
     public Transform[] waypoints;
 
+    public Transform spiderweb;
+
     bool startMoving;
     int i = 0;
 
@@ -26,7 +28,7 @@ public class TestFlyingLight : MonoBehaviour {
             
             if (Vector3.Distance(transform.position, waypoints[i].position) < 1f) {
 
-                if (i == 0) {
+                if (i < (waypoints.Length - 1)) {
 
                     i += 1;
 
@@ -43,6 +45,10 @@ public class TestFlyingLight : MonoBehaviour {
             //Vector3.MoveTowards(transform.position, waypoints[i].position, 1f);
         }
 
+        if (startMoving && Vector3.Distance(transform.position, waypoints[waypoints.Length - 1].position) < 0.2) {
+            transform.SetParent(spiderweb);
+            spiderweb.GetComponent<SpiderwebFirefly>().Activate();
+        }
 	}
 
 }
