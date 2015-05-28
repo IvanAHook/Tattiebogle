@@ -21,6 +21,8 @@ public class PlayerBlobMovement : MonoBehaviour {
 
     public Transform player;
 
+    bool aquired;
+
     Vector3 targetPosition;
     Vector3 moveDirection = Vector3.zero;
 
@@ -68,6 +70,14 @@ public class PlayerBlobMovement : MonoBehaviour {
             }
         }
 
+    }
+
+    public void SetIsAquired(bool aquired) {
+        this.aquired = aquired;
+    }
+
+    public bool IsAquired() {
+        return aquired;
     }
 
     IEnumerator Footsteps() {
