@@ -19,7 +19,7 @@ public class TestFlyingLight : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.S)) {
 
-            startMoving = true;
+            StartMoving();
 
         }
 
@@ -37,8 +37,8 @@ public class TestFlyingLight : MonoBehaviour {
             }
 
             Sequence testS = DOTween.Sequence();
-            testS.Append(transform.DOMove(waypoints[i].position, 1f))
-                .Append(transform.DORotate(new Vector3(0f, 180f, 0f), 1f));
+            testS.Append(transform.DOMove(waypoints[i].position, 2f))
+                .Append(transform.DORotate(new Vector3(0f, 180f, 0f), 2f));
 
 
             //transform.DOMove(waypoints[i].position, 4f);
@@ -50,5 +50,9 @@ public class TestFlyingLight : MonoBehaviour {
             spiderweb.GetComponent<SpiderwebFirefly>().Activate();
         }
 	}
+
+    public void StartMoving() {
+        startMoving = true;
+    }
 
 }
