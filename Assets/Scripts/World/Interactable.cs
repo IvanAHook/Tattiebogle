@@ -25,6 +25,9 @@ public class Interactable : MonoBehaviour {
     public void Interact() {
     }
 
+    void ItemInteract() {
+    }
+
     public Vector3 GetInteractPosition() {
         return interactTransform.position;
     }

@@ -1,7 +1,7 @@
 // Shader created with Shader Forge v1.13 
 // Shader Forge (c) Neat Corporation / Joachim Holmer - http://www.acegikmo.com/shaderforge/
 // Note: Manually altering this data may prevent you from opening it in Shader Forge
-/*SF_DATA;ver:1.13;sub:START;pass:START;ps:flbk:,lico:1,lgpr:1,nrmq:1,nrsp:0,limd:1,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:False,rprd:False,enco:False,rmgx:True,rpth:0,hqsc:True,hqlp:False,tesm:0,bsrc:0,bdst:1,culm:0,dpts:2,wrdp:True,dith:0,ufog:True,aust:True,igpj:False,qofs:0,qpre:1,rntp:1,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,ofsf:0,ofsu:0,f2p0:False;n:type:ShaderForge.SFN_Final,id:7010,x:33351,y:32540,varname:node_7010,prsc:2|emission-1814-RGB;n:type:ShaderForge.SFN_Tex2d,id:1814,x:33018,y:32648,ptovrint:False,ptlb:tex_panning,ptin:_tex_panning,varname:node_1814,prsc:2,tex:f0b79e6ab2636f44aa511e1227665ffa,ntxv:0,isnm:False|UVIN-8135-UVOUT;n:type:ShaderForge.SFN_Panner,id:8135,x:32797,y:32635,varname:node_8135,prsc:2,spu:0.2,spv:0.2;proporder:1814;pass:END;sub:END;*/
+/*SF_DATA;ver:1.13;sub:START;pass:START;ps:flbk:,lico:1,lgpr:1,nrmq:1,nrsp:0,limd:1,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:False,rprd:False,enco:False,rmgx:True,rpth:0,hqsc:True,hqlp:False,tesm:0,bsrc:0,bdst:1,culm:0,dpts:2,wrdp:True,dith:0,ufog:True,aust:True,igpj:False,qofs:0,qpre:1,rntp:1,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,ofsf:0,ofsu:0,f2p0:False;n:type:ShaderForge.SFN_Final,id:7010,x:33336,y:32606,varname:node_7010,prsc:2|emission-1814-RGB;n:type:ShaderForge.SFN_Tex2d,id:1814,x:32818,y:32504,ptovrint:False,ptlb:tex_panning,ptin:_tex_panning,varname:node_1814,prsc:2,tex:f0b79e6ab2636f44aa511e1227665ffa,ntxv:0,isnm:False|UVIN-8135-UVOUT;n:type:ShaderForge.SFN_Panner,id:8135,x:32600,y:32504,varname:node_8135,prsc:2,spu:0.2,spv:0.2;proporder:1814;pass:END;sub:END;*/
 
 Shader "Shader Forge/scrolling" {
     Properties {
@@ -49,8 +49,8 @@ Shader "Shader Forge/scrolling" {
 /////// Vectors:
 ////// Lighting:
 ////// Emissive:
-                float4 node_4118 = _Time + _TimeEditor;
-                float2 node_8135 = (i.uv0+node_4118.g*float2(0.2,0.2));
+                float4 node_4279 = _Time + _TimeEditor;
+                float2 node_8135 = (i.uv0+node_4279.g*float2(0.2,0.2));
                 float4 _tex_panning_var = tex2D(_tex_panning,TRANSFORM_TEX(node_8135, _tex_panning));
                 float3 emissive = _tex_panning_var.rgb;
                 float3 finalColor = emissive;
