@@ -23,16 +23,16 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Texture
+          name: _Transp
         second:
-          m_Texture: {fileID: 2800000, guid: fc79468710d144c4f87cc6209aa1c4cc, type: 3}
+          m_Texture: {fileID: 2800000, guid: cb89008e708e4bc48a4368c06b3ff5fc, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Transp
+          name: _Texture
         second:
-          m_Texture: {fileID: 2800000, guid: cb89008e708e4bc48a4368c06b3ff5fc, type: 3}
+          m_Texture: {fileID: 2800000, guid: fc79468710d144c4f87cc6209aa1c4cc, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -76,5 +76,9 @@ Material:
       data:
         first:
           name: _DepthIntensity
-        second: .25
-    m_Colors: {}
+        second: .560000002
+    m_Colors:
+      data:
+        first:
+          name: _node_2148
+        second: {r: .632352948, g: .632352948, b: .632352948, a: 1}
