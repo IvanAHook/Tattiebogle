@@ -13,6 +13,7 @@ public class SpiderwebFirefly : Interactable {
 
     public void ItemInteract(Transform t) {
         if (t.GetComponent<UiItem>().worldItem == item && active) {
+            GetComponent<MeshRenderer>().enabled = false;
             Transform hand = FindObjectOfType<PlayerMovement>().hand;
             hand.GetComponent<UiHand>().Show();
             hand.GetComponent<UiHand>().PickupItem(transform);

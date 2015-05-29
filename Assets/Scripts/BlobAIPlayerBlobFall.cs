@@ -7,6 +7,9 @@ public class BlobAIPlayerBlobFall : MonoBehaviour
 	
 	public Transform target;
 	public NavMeshAgent agent;
+
+    public Transform light;
+
 	private int moveSpeedHash;
 	private int flexHash;
 	private int LookAroundHash;
@@ -82,17 +85,18 @@ public class BlobAIPlayerBlobFall : MonoBehaviour
 		}
 		else
 		{
-			if (myAction!=BlobAction.Moving)
+            if (myAction != BlobAction.Moving && moveHash != 0)
 			{
 				myAction=BlobAction.Moving;
 				anim.SetTrigger (moveHash);
 				anim.SetBool (pushUpHash, false);
 			}
 			fallPos = agent.transform.position-target.transform.position;
-			if (fallPos.magnitude<=0.01f && !hasTripped)
+            if (agent.remainingDistance<= 0.2f && !hasTripped)
 			{
 				hasTripped = true;
 				Trip ();
+                light.GetComponent<TestFlyingLight>().StartMoving();
 			}
 			blendSpeed = Mathf.Lerp (0, 1, agent.velocity.magnitude / agent.speed);
 			anim.SetFloat(moveSpeedHash, blendSpeed);

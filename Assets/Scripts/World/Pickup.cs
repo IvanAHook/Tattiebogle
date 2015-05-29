@@ -5,6 +5,7 @@ public class Pickup : MonoBehaviour {
 
 	Animator animator;
 
+    public Transform worldItem;
 	public Sprite sprite;
 
 	void Start (){
