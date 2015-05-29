@@ -11,6 +11,7 @@ GameObject:
   - 33: {fileID: 3310646}
   - 23: {fileID: 2362804}
   - 95: {fileID: 9555342}
+  - 65: {fileID: 6543630}
   m_Layer: 0
   m_Name: Broom_Mesh
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 172736}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15, y: 0, z: 0}
+  m_LocalPosition: {x: -27, y: 0, z: 33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -61,6 +62,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 172736}
   m_Mesh: {fileID: 4300000, guid: 1cad16a580c156143990a83c44511a37, type: 3}
+--- !u!65 &6543630
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 172736}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .408928961, y: 1.52750087, z: .296478271}
+  m_Center: {x: .511285901, y: .762566924, z: .148001403}
 --- !u!95 &9555342
 Animator:
   serializedVersion: 3

@@ -11,6 +11,7 @@ GameObject:
   - 33: {fileID: 3312692}
   - 23: {fileID: 2358820}
   - 95: {fileID: 9539618}
+  - 65: {fileID: 6539108}
   m_Layer: 0
   m_Name: PictureFrame_v3_Mesh
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 168448}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36, y: 0, z: 0}
+  m_LocalPosition: {x: -30, y: 1, z: 31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -61,6 +62,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 168448}
   m_Mesh: {fileID: 4300000, guid: df8066a09b4a8754883c446ee5be683e, type: 3}
+--- !u!65 &6539108
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168448}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .981552064, y: 1.06792569, z: .176193193}
+  m_Center: {x: .49962458, y: 5.06639481e-07, z: .0880965069}
 --- !u!95 &9539618
 Animator:
   serializedVersion: 3
