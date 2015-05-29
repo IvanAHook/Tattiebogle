@@ -9,9 +9,9 @@ public class LifelessBlob : Actor {
             transform.gameObject.layer = 14;
             transform.gameObject.tag = "Player";
             GetComponent<BoxCollider>().enabled = false;
-            GetComponentInChildren<BlobAIPlayerBlobFall>().enabled = false;
+            //GetComponentInChildren<BlobAIPlayerBlobFall>().enabled = false;
             GetComponentInChildren<PlayerBlobMovement>().enabled = true;
-            GetComponentInChildren<BlobAI>().enabled = true;
+            //GetComponentInChildren<BlobAI>().enabled = true;
         }
     }
 

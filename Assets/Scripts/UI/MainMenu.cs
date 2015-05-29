@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour {
 	
 
 	public void StartGame(){
-		Application.LoadLevel ("TestScene3");
+        Application.LoadLevel("MainLevelImplementingStuff");
 	}
 	
 	public void QuitGame(){

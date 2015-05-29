@@ -35,22 +35,6 @@ public class PlayerGroupController : MonoBehaviour {
 	}
 
     void UpdateInput() {
-        /*if (Input.GetKey(KeyCode.W)) {
-
-        }
-        if (Input.GetKey(KeyCode.S)) {
-
-        }
-        if (Input.GetKey(KeyCode.A)) {
-
-        }
-        if (Input.GetKey(KeyCode.D)) {
-
-        }
-
-        moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        moveDirection = transform.TransformDirection(moveDirection);
-        moveDirection *= speed;*/
 
         if (Input.GetKeyDown(KeyCode.Space)) {
             SwitchPlayer();
@@ -74,25 +58,8 @@ public class PlayerGroupController : MonoBehaviour {
                 Instantiate(clickDust, hitInfo.transform.position, Quaternion.identity);
 
             }
-
-        }
-
-        if (Input.GetMouseButton(0)) {
-
-            RaycastHit hitInfo;
-
-            // Dont continue if raycast does not hit anything!
-            if (!Physics.Raycast(cam.ScreenPointToRay(Input.mousePosition), out hitInfo)) {
-                return;
-            }
-
-            // Dont continue if clicking on ui
-            if (EventSystem.current.IsPointerOverGameObject()) {
-                return;
-            }
-
             if (hitInfo.transform.gameObject.layer == 8 || hitInfo.transform.gameObject.layer == 10 || hitInfo.transform.gameObject.layer == 12) {
-
+                Debug.Log(hitInfo.transform.position);
                 if (activePlayer == ActivePlayer.Player) {
                     player.SetDestination(hitInfo.transform.position);
                 } else if (activePlayer == ActivePlayer.Blob) {
@@ -102,6 +69,32 @@ public class PlayerGroupController : MonoBehaviour {
             }
 
         }
+
+        //if (Input.GetMouseButton(0)) {
+
+        //    RaycastHit hitInfo;
+
+        //    // Dont continue if raycast does not hit anything!
+        //    if (!Physics.Raycast(cam.ScreenPointToRay(Input.mousePosition), out hitInfo)) {
+        //        return;
+        //    }
+
+        //    // Dont continue if clicking on ui
+        //    if (EventSystem.current.IsPointerOverGameObject()) {
+        //        return;
+        //    }
+
+        //    if (hitInfo.transform.gameObject.layer == 8 || hitInfo.transform.gameObject.layer == 10 || hitInfo.transform.gameObject.layer == 12) {
+
+        //        if (activePlayer == ActivePlayer.Player) {
+        //            player.SetDestination(hitInfo.transform.position);
+        //        } else if (activePlayer == ActivePlayer.Blob) {
+        //            playerBlob.SetDestination(hitInfo.transform.position);
+        //        }
+
+        //    }
+
+        //}
 
     }
 
