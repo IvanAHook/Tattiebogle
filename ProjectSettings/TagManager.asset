@@ -9,6 +9,7 @@ TagManager:
   - CameraStay
   - Pickup
   - Actor
+  - Intractable
   layers:
   - Default
   - TransparentFX
@@ -25,7 +26,7 @@ TagManager:
   - Actor
   - Interactable
   - Player
-  - 
+  - "norma\xF6"
   - 
   - 
   - 

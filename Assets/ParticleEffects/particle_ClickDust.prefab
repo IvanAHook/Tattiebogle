@@ -121,7 +121,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     startSpeed:
-      scalar: 10
+      scalar: 2.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -245,10 +245,10 @@ ParticleSystem:
         rgba: 4294967295
       maxColor:
         serializedVersion: 2
-        rgba: 4286551199
+        rgba: 4283789438
       minMaxState: 0
     startSize:
-      scalar: 1
+      scalar: .5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -320,7 +320,7 @@ ParticleSystem:
     serializedVersion: 2
     enabled: 1
     type: 10
-    radius: .75
+    radius: .25
     angle: 25
     length: 5
     boxX: 1
@@ -451,13 +451,13 @@ ParticleSystem:
       maxGradient:
         key0:
           serializedVersion: 2
-          rgba: 4289440683
+          rgba: 4285098345
         key1:
           serializedVersion: 2
-          rgba: 4290823882
+          rgba: 4285756790
         key2:
           serializedVersion: 2
-          rgba: 3100100551
+          rgba: 3093784423
         key3:
           serializedVersion: 2
           rgba: 0
@@ -1169,7 +1169,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     startSpeed:
-      scalar: 10
+      scalar: 2.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1296,7 +1296,7 @@ ParticleSystem:
         rgba: 4283852914
       minMaxState: 0
     startSize:
-      scalar: .75
+      scalar: .5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1368,7 +1368,7 @@ ParticleSystem:
     serializedVersion: 2
     enabled: 1
     type: 11
-    radius: .5
+    radius: .25
     angle: 25
     length: 5
     boxX: 1
