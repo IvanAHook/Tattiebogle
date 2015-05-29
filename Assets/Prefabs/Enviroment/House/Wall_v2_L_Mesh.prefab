@@ -11,6 +11,7 @@ GameObject:
   - 33: {fileID: 3377910}
   - 23: {fileID: 2371200}
   - 95: {fileID: 9534624}
+  - 65: {fileID: 6554140}
   m_Layer: 0
   m_Name: Wall_v2_L_Mesh
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 196980}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26, y: 0, z: 0}
+  m_LocalPosition: {x: -20, y: 0, z: 25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -61,6 +62,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 196980}
   m_Mesh: {fileID: 4300000, guid: f62752faae581574b88ac04a6d288a4d, type: 3}
+--- !u!65 &6554140
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 196980}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2.00013971, z: .418062389}
+  m_Center: {x: -1, y: .999930203, z: .209031135}
 --- !u!95 &9534624
 Animator:
   serializedVersion: 3

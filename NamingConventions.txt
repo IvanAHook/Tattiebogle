@@ -1,25 +1,15 @@
-All Textures shall be in the folder "textures"
-All fbx/obj shall be in the folder "Fbx"
-All Shaders shall be in folder "Shaders"
-All materials Shall be in folder "materials"
-All prefabs shall be in folder "prefabs" - This folder contains subfolders to make it more easy for the designers to select the specific prefab!
-
-
 Naming conventions
 
 scripts: MyScript.cs
 
-shader: Name_Shdr
+shader: shdr_myShader
 
-materials: name_M
+materials: mat_myMat
 
-meshes:  Name_Mesh.fbx
+meshes:  mesh_myMesh.fbx
 
-Prefabs: Name_Pfb
+textures: tex_myTex.psd
 
-Diffuse: Name_T
-Normal: Name_N
-Spec: Name_S
 
 C# naming conventions and code standard:
 

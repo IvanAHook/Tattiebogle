@@ -30,7 +30,6 @@ public class UiItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 
     void Update() {
 
-        // dont do this in update
         if (target && playerMovement.agent.remainingDistance < 0.25f) {
             target.transform.SendMessage("ItemInteract", transform, SendMessageOptions.DontRequireReceiver);
             target.transform.SendMessage("AbilityInteract", transform, SendMessageOptions.DontRequireReceiver);
