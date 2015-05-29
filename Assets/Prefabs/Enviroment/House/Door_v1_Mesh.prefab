@@ -11,6 +11,7 @@ GameObject:
   - 33: {fileID: 3353484}
   - 23: {fileID: 2399378}
   - 95: {fileID: 9501790}
+  - 65: {fileID: 6505372}
   m_Layer: 0
   m_Name: Door_v1_Mesh
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 171584}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25, y: 0, z: 0}
+  m_LocalPosition: {x: -44, y: 0, z: 30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -61,6 +62,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 171584}
   m_Mesh: {fileID: 4300000, guid: 6135e8d7cf16bad4b96147db32551fdb, type: 3}
+--- !u!65 &6505372
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 171584}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.31941521, y: 1.83444512, z: .766552925}
+  m_Center: {x: .573771417, y: .917222559, z: .153273225}
 --- !u!95 &9501790
 Animator:
   serializedVersion: 3

@@ -11,6 +11,7 @@ GameObject:
   - 33: {fileID: 3319638}
   - 23: {fileID: 2342108}
   - 95: {fileID: 9527642}
+  - 65: {fileID: 6556820}
   m_Layer: 0
   m_Name: Wall_v1_Corner_Mesh
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 113460}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 0, z: 0}
+  m_LocalPosition: {x: -21, y: 0, z: 29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -61,6 +62,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 113460}
   m_Mesh: {fileID: 4300004, guid: 7cacdfacc2d0c9a4a87db3c49ba7791c, type: 3}
+--- !u!65 &6556820
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 113460}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .62451905, y: 3.00574708, z: .635609925}
+  m_Center: {x: .297662884, y: 1.49928653, z: .310489863}
 --- !u!95 &9527642
 Animator:
   serializedVersion: 3
