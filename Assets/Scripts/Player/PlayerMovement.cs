@@ -11,11 +11,7 @@ public class PlayerMovement : MonoBehaviour {
     public AudioClip[] footsteps;
     public float footDelay;
 
-	private int moveSpeedHash;
     public bool isMoving;
-	float blendSpeed;
-	Animator anim;
-
     public bool active = true;
 
     public float speed = 100f;
@@ -31,13 +27,10 @@ public class PlayerMovement : MonoBehaviour {
     Camera cam;
 
     void Start() {
-		moveSpeedHash = Animator.StringToHash ("Speed");
 
         cam = Camera.main;
 
         agent = GetComponent<NavMeshAgent>();
-
-		anim = GetComponentInChildren<Animator> ();
 
         audioSource = transform.GetComponent<AudioSource>();
         StartCoroutine(Footsteps());
@@ -72,9 +65,6 @@ public class PlayerMovement : MonoBehaviour {
                 PickupItem();
             }
         }
-
-		blendSpeed = Mathf.Lerp (0, 1, agent.velocity.magnitude / agent.speed);
-		anim.SetFloat(moveSpeedHash, blendSpeed);
 
     }
 

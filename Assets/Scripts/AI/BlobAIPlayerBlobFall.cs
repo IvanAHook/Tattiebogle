@@ -7,9 +7,6 @@ public class BlobAIPlayerBlobFall : MonoBehaviour
 	
 	public Transform target;
 	public NavMeshAgent agent;
-
-    public Transform light;
-
 	private int moveSpeedHash;
 	private int flexHash;
 	private int LookAroundHash;
@@ -21,6 +18,7 @@ public class BlobAIPlayerBlobFall : MonoBehaviour
 	private float minRandomIdle = 1;
 	private float maxRandomIdle = 7;
 	bool hasFallen;
+	Vector3 fallPos;
 	bool hasTripped;
 	
 	//private bool pushingUp;
@@ -66,15 +64,15 @@ public class BlobAIPlayerBlobFall : MonoBehaviour
 				switch (randomTrigger)
 				{
 				case 0:
-					//anim.SetTrigger (flexHash);
+					anim.SetTrigger (flexHash);
 					break;
 				case 1:
-					//anim.SetTrigger (LookAroundHash);
+					anim.SetTrigger (LookAroundHash);
 					break;
 				case 2:
-					//anim.SetBool (pushUpHash, true);
-					//pushupTime=RandomTime();
-					//myAction=BlobAction.PushingUp;
+					anim.SetBool (pushUpHash, true);
+					pushupTime=RandomTime();
+					myAction=BlobAction.PushingUp;
 					break;
 				default:
 					Debug.Log("Incorrect anim trigger selection");
@@ -84,17 +82,17 @@ public class BlobAIPlayerBlobFall : MonoBehaviour
 		}
 		else
 		{
-            if (myAction != BlobAction.Moving && moveHash != 0)
+			if (myAction!=BlobAction.Moving)
 			{
 				myAction=BlobAction.Moving;
 				anim.SetTrigger (moveHash);
 				anim.SetBool (pushUpHash, false);
 			}
-            if (agent.remainingDistance<= 0.2f && !hasTripped)
+			fallPos = agent.transform.position-target.transform.position;
+			if (fallPos.magnitude<=0.01f && !hasTripped)
 			{
 				hasTripped = true;
 				Trip ();
-                light.GetComponent<TestFlyingLight>().StartMoving();
 			}
 			blendSpeed = Mathf.Lerp (0, 1, agent.velocity.magnitude / agent.speed);
 			anim.SetFloat(moveSpeedHash, blendSpeed);

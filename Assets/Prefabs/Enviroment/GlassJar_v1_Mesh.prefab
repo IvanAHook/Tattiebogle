@@ -43,6 +43,7 @@ GameObject:
   - 4: {fileID: 492318}
   - 33: {fileID: 3393780}
   - 23: {fileID: 2371082}
+  - 65: {fileID: 6562082}
   m_Layer: 0
   m_Name: GlassJar_v1_Glass
   m_TagString: Untagged
@@ -69,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 106136}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8, y: 1, z: 0}
+  m_LocalPosition: {x: -32, y: 0, z: 33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 492318}
@@ -150,6 +151,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 153928}
   m_Mesh: {fileID: 4300000, guid: dcc4591fbbb18e74fa2edc2a0e208de3, type: 3}
+--- !u!65 &6562082
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 153928}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .533627927, y: .572645009, z: .536567032}
+  m_Center: {x: .497443229, y: .286322504, z: .499999791}
 --- !u!95 &9549216
 Animator:
   serializedVersion: 3

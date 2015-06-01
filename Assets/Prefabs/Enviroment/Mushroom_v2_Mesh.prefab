@@ -11,6 +11,7 @@ GameObject:
   - 33: {fileID: 3392064}
   - 23: {fileID: 2316476}
   - 95: {fileID: 9523700}
+  - 65: {fileID: 6571812}
   m_Layer: 0
   m_Name: Mushroom_v2_Mesh
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 188750}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30, y: 0, z: 1}
+  m_LocalPosition: {x: -28, y: 0, z: 34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -61,6 +62,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 188750}
   m_Mesh: {fileID: 4300002, guid: 5e13d598d2e0bf64c8a388283fde71ed, type: 3}
+--- !u!65 &6571812
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 188750}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .68792665, y: .636956692, z: .688295245}
+  m_Center: {x: -.5114218, y: .318478346, z: -.499875784}
 --- !u!95 &9523700
 Animator:
   serializedVersion: 3

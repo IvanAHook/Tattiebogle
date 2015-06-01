@@ -5,6 +5,7 @@ public class BlobAITrigger : MonoBehaviour {
 
 	public BlobAI[] blobList;
     public BlobAIPlayerBlobFall playerBlob;
+    public TestFlyingLight light;
 
 	void OnTriggerStay(Collider other) {
 		if (other.transform.tag == "Player") {
@@ -14,6 +15,7 @@ public class BlobAITrigger : MonoBehaviour {
 				}
 			}
             playerBlob.Invoke("Trigger", Random.Range(0f, 3f));
+            light.StartMoving();
 		}
 
 	}
