@@ -86,7 +86,7 @@ public class BlobAI : MonoBehaviour
 		}
 		else
 		{
-			if (myAction!=BlobAction.Moving)
+			if (myAction!=BlobAction.Moving && moveHash != 0)
 			{
 				myAction=BlobAction.Moving;
 				anim.SetTrigger (moveHash);
