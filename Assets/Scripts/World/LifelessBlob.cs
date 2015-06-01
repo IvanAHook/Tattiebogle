@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LifelessBlob : Actor {
+public class LifelessBlob : Interactable {
 
-    void ItemInteract(Transform t) {
-        if (t.GetComponent<UiItem>().worldItem == item) {
-            Destroy(t.gameObject);
+    public override void Interact(Transform item) {
+        if (item.GetComponent<UiItem>().worldItem == interractItem) {
+            Destroy(item.gameObject);
             transform.gameObject.layer = 14;
             transform.gameObject.tag = "Player";
             GetComponent<BoxCollider>().enabled = false;

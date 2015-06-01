@@ -11,7 +11,6 @@ GameObject:
   - 33: {fileID: 3395900}
   - 64: {fileID: 6406578}
   - 23: {fileID: 2342202}
-  - 114: {fileID: 11458346}
   - 65: {fileID: 6513448}
   m_Layer: 8
   m_Name: FloorQuad
@@ -87,19 +86,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: .100000001}
   m_Center: {x: 0, y: 0, z: .0500000007}
---- !u!114 &11458346
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 187798}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a623a57d0a785c4dbfd232012fb6373, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  acticveColor: {r: 0, g: 0, b: 0, a: 0}
-  defaultColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

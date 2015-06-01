@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Interactable : MonoBehaviour {
+public class Interactable  : MonoBehaviour {
 
     Animator animator;
 
+    public Transform interractItem;
+    public Sprite messageSprite;
     public Transform interactTransform;
 
     void Start() {
@@ -13,19 +15,22 @@ public class Interactable : MonoBehaviour {
         }
     }
 
-    void Update() {
-    }
-
     public void PlayAnim() {
         if (animator) {
             animator.SetTrigger("ClickTrigger");
         }
     }
 
-    public void Interact() {
+    public virtual void Interact() {
+//        if (messageSprite != null) {
+//            GameObject.Find("MessageHandler").GetComponentInChildren<MessageHandler>().AddMessage(transform, new Vector3(0f, 2f, 1f), messageSprite, 4f);
+//        }
     }
 
-    void ItemInteract() {
+    public virtual void Interact(Transform item) {
+        //if (t.GetComponent<UiItem>().worldItem == item;) {
+        //    Destroy(t.gameObject);
+        //}
     }
 
     public Vector3 GetInteractPosition() {

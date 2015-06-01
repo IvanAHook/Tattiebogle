@@ -58,8 +58,7 @@ public class PlayerGroupController : MonoBehaviour {
                 Instantiate(clickDust, hitInfo.transform.position, Quaternion.identity);
 
             }
-            if (hitInfo.transform.gameObject.layer == 8 || hitInfo.transform.gameObject.layer == 10 || hitInfo.transform.gameObject.layer == 12) {
-                Debug.Log(hitInfo.transform.position);
+            if (hitInfo.transform.gameObject.layer == 8 || hitInfo.transform.gameObject.layer == 10 || hitInfo.transform.gameObject.layer == 13) {
                 if (activePlayer == ActivePlayer.Player) {
                     player.SetDestination(hitInfo.transform.position);
                 } else if (activePlayer == ActivePlayer.Blob) {
@@ -104,7 +103,7 @@ public class PlayerGroupController : MonoBehaviour {
 
         if (Physics.Raycast(cam.ScreenPointToRay(Input.mousePosition), out hitInfo) && activePlayer == ActivePlayer.Player) {
 
-            if (hitInfo.transform.GetComponent<Pickup>() || hitInfo.transform.GetComponent<Interactable>() || hitInfo.transform.GetComponent<Actor>()) {
+            if (hitInfo.transform.GetComponent<Pickup>() || hitInfo.transform.GetComponent<Interactable>()) {
                 Cursor.SetCursor(cursorInteract, Vector2.zero, CursorMode.Auto);
             } else {
                 Cursor.SetCursor(cursorDefault, Vector2.zero, CursorMode.Auto);

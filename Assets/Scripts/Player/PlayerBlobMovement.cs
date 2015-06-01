@@ -5,7 +5,6 @@ using UnityEngine.EventSystems;
 
 public class PlayerBlobMovement : MonoBehaviour {
 
-    CharacterController cc;
     NavMeshAgent agent;
 
     AudioSource audioSource;
@@ -23,14 +22,7 @@ public class PlayerBlobMovement : MonoBehaviour {
 
     bool aquired;
 
-    Vector3 targetPosition;
-    Vector3 moveDirection = Vector3.zero;
-
     void Start() {
-
-        cc = GetComponent<CharacterController>();
-
-        targetPosition = transform.position;
 
         agent = GetComponent<NavMeshAgent>();
 

@@ -14,9 +14,6 @@ public class Pickup : MonoBehaviour {
         }
 	}
 
-	void Update () {
-	}
-
     public void ResetItem() {
 
     }

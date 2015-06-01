@@ -32,8 +32,9 @@ public class UiItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 
         // dont do this in update
         if (target && playerMovement.agent.remainingDistance < 0.25f) {
-            target.transform.SendMessage("ItemInteract", transform, SendMessageOptions.DontRequireReceiver);
-            target.transform.SendMessage("AbilityInteract", transform, SendMessageOptions.DontRequireReceiver);
+            //target.transform.SendMessage("Interact", transform, SendMessageOptions.DontRequireReceiver);
+            //Debug.Log(target.GetComponent<Interactable>());
+            target.GetComponent<Interactable>().Interact(transform);
             target = null;
             playerMovement.Halt();
         }
@@ -108,11 +109,8 @@ public class UiItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
             GetComponent<Image>().sprite = sprite;
             return;
         }
-
-        if (hitInfo.transform.tag == "Actor") {
-            target = hitInfo.transform;
-            playerMovement.SetDestination(target.GetComponent<Actor>().GetInteractPosition());
-        } else if (hitInfo.transform.tag == "Interactable") {
+        
+        if (hitInfo.transform.tag == "Interactable") {
             target = hitInfo.transform;
             playerMovement.SetDestination(target.GetComponent<Interactable>().GetInteractPosition());
         }

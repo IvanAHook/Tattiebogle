@@ -4,7 +4,6 @@ using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour {
 
-    CharacterController cc;
     public NavMeshAgent agent;
 
     AudioSource audioSource;
@@ -23,24 +22,18 @@ public class PlayerMovement : MonoBehaviour {
     bool pickup;
     bool interract;
 
-    Transform interractEnvironment;
-    Transform interractActor;
+    Transform interractTarget;
 
     public Transform inventoryItem;
 
     public Transform hand;
 
     Camera cam;
-    Vector3 targetPosition;
-    Vector3 moveDirection = Vector3.zero;
 
     void Start() {
 		moveSpeedHash = Animator.StringToHash ("Speed");
 
-        cc = GetComponent<CharacterController>();
-
         cam = Camera.main;
-        targetPosition = transform.position;
 
         agent = GetComponent<NavMeshAgent>();
 
@@ -53,7 +46,6 @@ public class PlayerMovement : MonoBehaviour {
     void Update() {
 
         Shader.SetGlobalVector("_PlayerPos", transform.position);
-        //Debug.Log(agent.velocity.magnitude);
         if (agent.velocity.magnitude > 1.5f) {
             if (!isMoving) {
                 isMoving = true;
@@ -68,17 +60,9 @@ public class PlayerMovement : MonoBehaviour {
             UpdateInput();
         }
 
-        if (interract && interractEnvironment) {
+        if (interract && interractTarget) {
             if (Vector3.Distance(transform.position, agent.destination) < 2f) {
-                interractEnvironment.transform.SendMessage("Interact", SendMessageOptions.DontRequireReceiver);
-                interractEnvironment.GetComponent<Interactable>().Interact();
-                interract = false;
-            }
-        }
-
-        if (interract && interractActor) {
-            if (Vector3.Distance(transform.position, agent.destination) < 2f) {
-                interractActor.GetComponent<Actor>().Interact();
+                interractTarget.GetComponent<Interactable>().Interact();
                 interract = false;
             }
         }
@@ -96,14 +80,6 @@ public class PlayerMovement : MonoBehaviour {
 
     void UpdateInput() {
 
-                /*moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-                moveDirection = transform.TransformDirection(moveDirection);
-                moveDirection *= speed;
-
-                cc.Move(moveDirection * Time.fixedDeltaTime);
-                Quaternion wanted_rotation = Quaternion.LookRotation(moveDirection);
-                transform.rotation = Quaternion.RotateTowards(transform.rotation, wanted_rotation, 1000f * Time.fixedDeltaTime);*/
-
         if (Input.GetMouseButtonDown(0)) {
 
             RaycastHit hitInfo;
@@ -118,8 +94,7 @@ public class PlayerMovement : MonoBehaviour {
                 return;
             }
 
-            if (hitInfo.transform.gameObject.layer == 8 || hitInfo.transform.gameObject.layer == 10 || hitInfo.transform.gameObject.layer == 12 || hitInfo.transform.gameObject.layer == 13) {
-
+            if (hitInfo.transform.gameObject.layer == 8 || hitInfo.transform.gameObject.layer == 10 || hitInfo.transform.gameObject.layer == 13) {
                 TargetHit(hitInfo.transform);
 
             }
@@ -143,12 +118,6 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     void TargetHit(Transform t) {
-        if (t.tag == "Actor") {
-            interract = true;
-            interractActor = t;
-            agent.destination = t.GetComponent<Actor>().interactTransform.position;
-            return;
-        }
         if (t.tag == "Pickup") {
             pickup = true;
             t.GetComponent<Pickup>().PlayAnim();
@@ -157,7 +126,7 @@ public class PlayerMovement : MonoBehaviour {
         }
         if (t.tag == "Interactable") {
             interract = true;
-            interractEnvironment = t;
+            interractTarget = t;
             agent.destination = t.GetComponent<Interactable>().interactTransform.position;
             return;
         }

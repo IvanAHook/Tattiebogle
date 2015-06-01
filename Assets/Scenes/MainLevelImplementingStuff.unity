@@ -864,23 +864,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34a6d3cdf8a4f0a46a08a081a74a04bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 1617736284}
-  interactTransform: {fileID: 471745706}
+  interractItem: {fileID: 1617736284}
   messageSprite: {fileID: 21300000, guid: 36f8357aa9402884f8db178d08958fb3, type: 3}
---- !u!114 &43146736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 43146726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9e00bb663dd5384b9bb76e16f2cb4cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 1617736284}
   interactTransform: {fileID: 471745706}
-  messageSprite: {fileID: 21300000, guid: 36f8357aa9402884f8db178d08958fb3, type: 3}
 --- !u!1001 &46418122
 Prefab:
   m_ObjectHideFlags: 0
@@ -12750,7 +12736,7 @@ Transform:
   - {fileID: 567881164}
   - {fileID: 1643479061}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 26
 --- !u!1001 &599605384
 Prefab:
   m_ObjectHideFlags: 0
@@ -25434,11 +25420,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 161374, guid: 15ace39c63b95d64d9ccb02c0087068d, type: 2}
       propertyPath: m_TagString
-      value: Actor
+      value: Interactable
       objectReference: {fileID: 0}
     - target: {fileID: 161374, guid: 15ace39c63b95d64d9ccb02c0087068d, type: 2}
       propertyPath: m_Layer
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 19505208, guid: 15ace39c63b95d64d9ccb02c0087068d, type: 2}
       propertyPath: m_ObstacleAvoidanceType
@@ -25830,6 +25816,10 @@ Prefab:
       propertyPath: m_ObstacleAvoidanceType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 13783566, guid: aea7048c269afdf4e8f1c291f8fe4c90, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 47a42cbfb73e8aa49a5d3d5fb46debe6, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aea7048c269afdf4e8f1c291f8fe4c90, type: 2}
   m_IsPrefabParent: 0
@@ -32371,8 +32361,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d20250110b3e364392d47c6157bab45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interractItem: {fileID: 1229084571}
+  messageSprite: {fileID: 0}
   interactTransform: {fileID: 1717960483}
-  item: {fileID: 1229084571}
 --- !u!4 &1617736284 stripped
 Transform:
   m_PrefabParentObject: {fileID: 413062, guid: 12598485c9307574c92948371bdcdf68, type: 2}
@@ -42571,21 +42562,6 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!114 &2048345721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2048345714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16d9ab6c97273e84b845402a28768748, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactTransform: {fileID: 207970225}
-  sfxDoorOpen: {fileID: 8300000, guid: 1d9983b19c472b447ad817a9fe5f9ce7, type: 3}
-  col: {fileID: 2048345719}
-  blocker: {fileID: 162000603}
 --- !u!208 &2048345722
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -42601,6 +42577,23 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: .574000001, y: .917000055, z: .0299999993}
   m_TimeToStationary: .5
+--- !u!114 &2048345723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2048345714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cdc5953ee0d8144aa14bd0a95871eee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interractItem: {fileID: 0}
+  messageSprite: {fileID: 0}
+  interactTransform: {fileID: 207970225}
+  sfxDoorOpen: {fileID: 8300000, guid: 1d9983b19c472b447ad817a9fe5f9ce7, type: 3}
+  col: {fileID: 2048345719}
+  blocker: {fileID: 162000603}
 --- !u!1001 &2051532064
 Prefab:
   m_ObjectHideFlags: 0

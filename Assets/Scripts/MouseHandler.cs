@@ -5,15 +5,11 @@ using UnityEngine.EventSystems;
 
 public class MouseHandler : MonoBehaviour {
 
-    public Transform player;
-    PlayerMovement pm;
-
     Camera cam;
 
 	void Start () {
 
         cam = Camera.main;
-        pm = player.GetComponent<PlayerMovement>();
 	
 	}
 	
@@ -43,23 +39,10 @@ public class MouseHandler : MonoBehaviour {
 
             } else if (hitInfo.transform.gameObject.layer == 10 || hitInfo.transform.gameObject.layer == 12) {
 
-                MouseHit(hitInfo.transform);
-
             }
         }
 
     }
 
-    void MouseHit(Transform t) {
-        if (t.tag == "Actor") {
-
-        }
-        if (t.tag == "Pickup") {
-
-        }
-        if (t.tag == "Interactable") {
-
-        }
-    }
 
 }

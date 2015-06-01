@@ -3,21 +3,19 @@ using System.Collections;
 
 public class SpiderwebFirefly : Interactable {
 
-    public Transform item;
-
     bool active;
 
     void Start() {
         active = false;
     }
 
-    public void ItemInteract(Transform t) {
-        if (t.GetComponent<UiItem>().worldItem == item && active) {
+    public override void Interact(Transform item) {
+        if (item.GetComponent<UiItem>().worldItem == interractItem && active) {
             GetComponent<MeshRenderer>().enabled = false;
             Transform hand = FindObjectOfType<PlayerMovement>().hand;
             hand.GetComponent<UiHand>().Show();
             hand.GetComponent<UiHand>().PickupItem(transform);
-            Destroy(t.gameObject);
+            Destroy(item.gameObject);
         }
     }
 
