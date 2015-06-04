@@ -133,6 +133,7 @@ public class PlayerMovement : MonoBehaviour {
         if (t.tag == "Interactable") {
             interract = true;
             interractTarget = t;
+			t.GetComponent<Pickup>().PlayAnim();
             SetDestination(t.GetComponent<Interactable>().interactTransform);
             //agent.destination = t.GetComponent<Interactable>().interactTransform.position;
             return;
