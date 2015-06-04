@@ -58,13 +58,15 @@ public class PlayerGroupController : MonoBehaviour {
                 Instantiate(clickDust, hitInfo.transform.position, Quaternion.identity);
 
             }
-            if (hitInfo.transform.gameObject.layer == 8 || hitInfo.transform.gameObject.layer == 10 || hitInfo.transform.gameObject.layer == 13) {
+            if (hitInfo.transform.gameObject.layer == 8) {
                 if (activePlayer == ActivePlayer.Player) {
-                    player.SetDestination(hitInfo.transform.position);
+                    player.SetDestination(hitInfo.transform);
                 } else if (activePlayer == ActivePlayer.Blob) {
                     playerBlob.SetDestination(hitInfo.transform.position);
                 }
 
+            } else if (hitInfo.transform.gameObject.layer == 10 || hitInfo.transform.gameObject.layer == 13) {
+                player.TargetHit(hitInfo.transform);
             }
 
         }

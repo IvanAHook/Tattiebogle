@@ -1,27 +1,41 @@
 ﻿using UnityEngine;
+using System.Collections;
 
-public class VegetationHit : MonoBehaviour 
-{
-	//Editor settings
-	public float MaxWobble = 1;
-	public float SlowDown = 1;
-	public float SpeedUp = 1;
+public class VegetationHit : MonoBehaviour {
 	
+	//private const float axWobble;
+	public float SlowDown = 0.5f;
+	public float SpeedUp = 10f;
+	public float PlayerPush =1;
+	public float ExploPush =2;
 	//local vars
+	private ParticleSystem part;
 	private Material mat;
 	private float startWobble;
 	private float currentWobble;
 	private bool doWobble;
 	private bool slowDown;
 	private int wobbleID;
-
+	private int playerX;
+	private int playerZ;
+	private int hitTime;
+	private Transform player;
+	
+	float maxIntensity = 1;
+	
 	void Awake()
 	{
+		part=GetComponentInChildren<ParticleSystem>();
 		mat = GetComponent<Renderer> ().material;
 		wobbleID = Shader.PropertyToID ("_Intensity");
+		playerX = Shader.PropertyToID ("_PlayerX");
+		playerZ = Shader.PropertyToID ("_PlayerZ");
+		hitTime = Shader.PropertyToID ("_HitTime");
 		startWobble = mat.GetFloat (wobbleID);
+		currentWobble = startWobble;
+		player = GameObject.FindGameObjectWithTag ("Player").transform;
 	}
-
+	
 	void Update () 
 	{
 		if (doWobble) 
@@ -30,7 +44,7 @@ public class VegetationHit : MonoBehaviour
 			if (!slowDown)
 			{
 				currentWobble+=Time.deltaTime*SpeedUp;
-				if (currentWobble>=MaxWobble)
+				if (currentWobble>=maxIntensity)
 				{
 					slowDown=true;
 				}
@@ -39,8 +53,8 @@ public class VegetationHit : MonoBehaviour
 			{
 				currentWobble-=Time.deltaTime*SlowDown;
 			}
-
-
+			
+			
 			//stop controlling wobble when it has reached the original value
 			if (currentWobble<=startWobble)
 			{
@@ -50,12 +64,33 @@ public class VegetationHit : MonoBehaviour
 			}
 		}
 	}
-
-	void OnTriggerEnter()
+	
+	void Wobble (Vector3 dir)
 	{
-		//start wobbling
+		if (part) part.Play ();
 		doWobble = true;
 		slowDown = false;
-		//currentWobble = MaxWobble;
+		dir = Quaternion.Euler (-transform.localEulerAngles) * dir; //Shifting the pushdirection baset on local rotation of the plant
+		
+		//setting values for the shader
+		mat.SetFloat (playerX, dir.x); 
+		mat.SetFloat (playerZ, dir.z);
+		mat.SetFloat (hitTime, Time.time);
 	}
+	
+	void OnTriggerEnter()
+	{
+		Vector3 pushDir = player.position-transform.position;
+		maxIntensity = PlayerPush;
+		Wobble (pushDir);
+
+	}
+	
+	public void Explosion (Vector3 exploPos, float dist)
+	{
+		maxIntensity = dist*ExploPush;
+		Vector3 pushDir =  exploPos-transform.position ;
+		Wobble (pushDir);
+	}
+	
 }
