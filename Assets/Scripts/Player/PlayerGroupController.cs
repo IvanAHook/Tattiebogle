@@ -55,7 +55,7 @@ public class PlayerGroupController : MonoBehaviour {
 
             if (hitInfo.transform.gameObject.layer == 8) {
 
-                Instantiate(clickDust, hitInfo.transform.position, Quaternion.identity);
+                Instantiate(clickDust, new Vector3(hitInfo.transform.position.x, hitInfo.transform.position.y + 1f, hitInfo.transform.position.z), Quaternion.identity);
 
             }
             if (hitInfo.transform.gameObject.layer == 8) {

@@ -9,6 +9,7 @@ public class VegetationHit : MonoBehaviour {
 	public float PlayerPush =1;
 	public float ExploPush =2;
 	//local vars
+	private ParticleSystem part;
 	private Material mat;
 	private float startWobble;
 	private float currentWobble;
@@ -24,6 +25,7 @@ public class VegetationHit : MonoBehaviour {
 	
 	void Awake()
 	{
+		part=GetComponentInChildren<ParticleSystem>();
 		mat = GetComponent<Renderer> ().material;
 		wobbleID = Shader.PropertyToID ("_Intensity");
 		playerX = Shader.PropertyToID ("_PlayerX");
@@ -65,6 +67,7 @@ public class VegetationHit : MonoBehaviour {
 	
 	void Wobble (Vector3 dir)
 	{
+		if (part) part.Play ();
 		doWobble = true;
 		slowDown = false;
 		dir = Quaternion.Euler (-transform.localEulerAngles) * dir; //Shifting the pushdirection baset on local rotation of the plant
@@ -80,6 +83,7 @@ public class VegetationHit : MonoBehaviour {
 		Vector3 pushDir = player.position-transform.position;
 		maxIntensity = PlayerPush;
 		Wobble (pushDir);
+
 	}
 	
 	public void Explosion (Vector3 exploPos, float dist)
