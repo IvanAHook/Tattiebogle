@@ -19,12 +19,14 @@ public class UiItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
     Transform target;
 
     PlayerMovement playerMovement;
+    PlayerGroupController playerGroupController;
 
     void Start() {
 
         cam = Camera.main;
         GetComponent<Image>().sprite = sprite;
         playerMovement = GameObject.Find("Player").GetComponent<PlayerMovement>();
+        playerGroupController = GameObject.Find("Player_Group").GetComponent<PlayerGroupController>();
 
     }
 
@@ -32,27 +34,25 @@ public class UiItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 
         // dont do this in update
         if (target && playerMovement.agent.remainingDistance < 0.25f) {
-            //target.transform.SendMessage("Interact", transform, SendMessageOptions.DontRequireReceiver);
             //Debug.Log(target.GetComponent<Interactable>());
             target.GetComponent<Interactable>().Interact(transform);
             target = null;
             playerMovement.Halt();
         }
+
     }
 
     public void OnBeginDrag(PointerEventData eventData) {
 
         originalParent = transform.parent;
         transform.SetParent(transform.parent.parent);
-        transform.GetComponent<Image>().enabled = false;
-
-        
+        //transform.GetComponent<Image>().enabled = false;
 
         RaycastHit hitInfo;
 
         // Dont continue if raycast does not hit anything!
         if (!Physics.Raycast(cam.ScreenPointToRay(Input.mousePosition), out hitInfo)) {
-            GetComponent<Image>().sprite = sprite;
+            //GetComponent<Image>().sprite = sprite;
             return;
         }
 
@@ -63,32 +63,31 @@ public class UiItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
     // fix worlditem going behind ui
     public void OnDrag(PointerEventData eventData) {
 
-        // Dont continue if clicking on ui
-        if (!EventSystem.current.IsPointerOverGameObject()) {
-            if (!worldItem.gameObject.activeSelf) {
-                worldItem.gameObject.SetActive(true);
-            }
-            //return;
-        }
-
         transform.position = eventData.position;
-
         RaycastHit hitInfo;
 
         // Plane raycast?
         // Dont continue if raycast does not hit anything!
         if (!Physics.Raycast(cam.ScreenPointToRay(Input.mousePosition), out hitInfo)) {
-            GetComponent<Image>().sprite = sprite;
+            //GetComponent<Image>().sprite = sprite;
             return;
+        }
+
+        if (EventSystem.current.IsPointerOverGameObject()) {
+            Debug.Log("over ui");
+        }
+
+        if (hitInfo.transform.gameObject && !EventSystem.current.IsPointerOverGameObject()) {
+            ShowWorldItem();
+        } else {
+            ShowIcon();
         }
 
         worldItem.position = GetMousePositionOnXY();
 
-        if (hitInfo.transform.tag == "Intractable") {
-            worldItem.LookAt(hitInfo.transform);
-        }
-
-//        worldItem.position = new Vector3(hitInfo.transform.position.x, 1f, hitInfo.transform.position.z);
+        //if (hitInfo.transform.tag == "Intractable") {
+        //    worldItem.LookAt(hitInfo.transform);
+        //}
 
     }
 
@@ -96,17 +95,14 @@ public class UiItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 
         RaycastHit hitInfo;
 
-
-        transform.GetComponent<Image>().enabled = true;
+        ShowIcon();
 
         transform.GetComponent<RectTransform>().localScale = new Vector3(1f, 1f, 1f);
         transform.SetParent(originalParent);
 
-        worldItem.gameObject.SetActive(false);
-
         // Dont continue if raycast does not hit anything!
         if (!Physics.Raycast(cam.ScreenPointToRay(Input.mousePosition), out hitInfo)) {
-            GetComponent<Image>().sprite = sprite;
+            //GetComponent<Image>().sprite = sprite;
             return;
         }
         
@@ -126,7 +122,21 @@ public class UiItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
             return hitPoint;
         }
         return Vector3.zero;
-    } 
+    }
+
+    void ShowWorldItem() {
+        if (worldItem.gameObject.activeSelf == false) {
+            worldItem.gameObject.SetActive(true);
+            transform.GetComponent<Image>().enabled = false;
+        }
+    }
+
+    void ShowIcon() {
+        if (worldItem.gameObject.activeSelf == true) {
+            worldItem.gameObject.SetActive(false);
+            transform.GetComponent<Image>().enabled = true;
+        }
+    }
 
     public void Drop(Vector3 pos) {
 

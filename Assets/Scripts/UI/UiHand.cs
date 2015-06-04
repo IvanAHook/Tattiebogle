@@ -25,6 +25,7 @@ public class UiHand : MonoBehaviour {
             heldItem = ((GameObject)Instantiate(defaultItemPrefab, Vector3.zero, Quaternion.identity)).transform;
             heldItem.GetComponent<UiItem>().sprite = item.GetComponent<Pickup>().sprite;
             heldItem.GetComponent<UiItem>().worldItem = item.GetComponent<Pickup>().worldItem;
+            heldItem.GetComponent<UiItem>().worldItem.position = player.position;
             heldItem.GetComponent<UiItem>().worldItem.gameObject.layer = 11;
             foreach (Transform i in heldItem.GetComponent<UiItem>().worldItem.GetComponentsInChildren<Transform>()) {
                 i.gameObject.layer = 11; 
