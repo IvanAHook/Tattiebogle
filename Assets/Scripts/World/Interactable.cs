@@ -33,7 +33,7 @@ public class Interactable  : MonoBehaviour {
         //}
     }
 
-    public Vector3 GetInteractPosition() {
-        return interactTransform.position;
+    public Transform GetInteractPosition() {
+        return interactTransform;
     }
 }

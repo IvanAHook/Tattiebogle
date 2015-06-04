@@ -9,6 +9,7 @@ TagManager:
   - CameraStay
   - Pickup
   - Actor
+  - Interactable
   layers:
   - Default
   - TransparentFX

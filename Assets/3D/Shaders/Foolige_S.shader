@@ -1,15 +1,22 @@
 // Shader created with Shader Forge v1.13 
 // Shader Forge (c) Neat Corporation / Joachim Holmer - http://www.acegikmo.com/shaderforge/
 // Note: Manually altering this data may prevent you from opening it in Shader Forge
-/*SF_DATA;ver:1.13;sub:START;pass:START;ps:flbk:,lico:1,lgpr:1,nrmq:1,nrsp:0,limd:1,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:False,rprd:False,enco:False,rmgx:True,rpth:0,hqsc:True,hqlp:False,tesm:0,bsrc:0,bdst:1,culm:0,dpts:2,wrdp:True,dith:0,ufog:True,aust:True,igpj:False,qofs:0,qpre:2,rntp:3,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.9558824,fgcg:0.5693123,fgcb:0.9292224,fgca:1,fgde:0.05,fgrn:0,fgrf:300,ofsf:0,ofsu:0,f2p0:False;n:type:ShaderForge.SFN_Final,id:1135,x:32719,y:32712,varname:node_1135,prsc:2|diff-2049-RGB,normal-7013-RGB,clip-9653-R,voffset-5659-OUT;n:type:ShaderForge.SFN_Panner,id:7903,x:31788,y:33236,varname:node_7903,prsc:2,spu:0.005,spv:-0.003;n:type:ShaderForge.SFN_Tex2d,id:2755,x:32584,y:33417,ptovrint:False,ptlb:node_9619,ptin:_node_9619,varname:_node_9619,prsc:2,ntxv:3,isnm:True;n:type:ShaderForge.SFN_VertexColor,id:741,x:32023,y:33246,varname:node_741,prsc:2;n:type:ShaderForge.SFN_FragmentPosition,id:9658,x:31623,y:32969,varname:node_9658,prsc:2;n:type:ShaderForge.SFN_Add,id:7922,x:31924,y:32999,varname:node_7922,prsc:2|A-9658-X,B-648-T;n:type:ShaderForge.SFN_Time,id:648,x:31623,y:33085,varname:node_648,prsc:2;n:type:ShaderForge.SFN_Sin,id:4406,x:32096,y:32999,varname:node_4406,prsc:2|IN-7922-OUT;n:type:ShaderForge.SFN_Multiply,id:2163,x:32281,y:33020,varname:node_2163,prsc:2|A-4406-OUT,B-9369-OUT,C-741-RGB;n:type:ShaderForge.SFN_Vector1,id:3626,x:31924,y:33222,varname:node_3626,prsc:2,v1:0.001;n:type:ShaderForge.SFN_NormalVector,id:2152,x:32255,y:33189,prsc:2,pt:False;n:type:ShaderForge.SFN_Multiply,id:5659,x:32492,y:33141,varname:node_5659,prsc:2|A-2163-OUT,B-6970-OUT;n:type:ShaderForge.SFN_Tex2d,id:9653,x:31991,y:32826,ptovrint:False,ptlb:Transparancy,ptin:_Transparancy,varname:_Transparancy,prsc:2,tex:cb89008e708e4bc48a4368c06b3ff5fc,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Tex2d,id:7013,x:32177,y:32732,ptovrint:False,ptlb:node_7013,ptin:_node_7013,varname:_node_7013,prsc:2,tex:9e463e1043f31724387ef30c1c366525,ntxv:3,isnm:True;n:type:ShaderForge.SFN_Tex2d,id:2049,x:31774,y:32766,ptovrint:False,ptlb:texture,ptin:_texture,varname:_texture,prsc:2,tex:fc79468710d144c4f87cc6209aa1c4cc,ntxv:0,isnm:False;n:type:ShaderForge.SFN_ValueProperty,id:9369,x:31922,y:33178,ptovrint:False,ptlb:Intensity,ptin:_Intensity,varname:_Intensity,prsc:2,glob:False,v1:0;n:type:ShaderForge.SFN_Vector3,id:2443,x:32456,y:33268,varname:node_2443,prsc:2,v1:1,v2:0,v3:1;n:type:ShaderForge.SFN_TexCoord,id:9529,x:32074,y:33531,varname:node_9529,prsc:2,uv:0;n:type:ShaderForge.SFN_Append,id:6970,x:32310,y:33406,varname:node_6970,prsc:2|A-9529-UVOUT,B-5136-OUT;n:type:ShaderForge.SFN_Panner,id:9898,x:31809,y:33452,varname:node_9898,prsc:2,spu:1,spv:1;n:type:ShaderForge.SFN_ValueProperty,id:5136,x:31973,y:33496,ptovrint:False,ptlb:node_5136,ptin:_node_5136,varname:_node_5136,prsc:2,glob:False,v1:0;proporder:9653-7013-2049-9369-5136;pass:END;sub:END;*/
+/*SF_DATA;ver:1.13;sub:START;pass:START;ps:flbk:,lico:1,lgpr:1,nrmq:1,nrsp:0,limd:1,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:False,rprd:False,enco:False,rmgx:True,rpth:0,hqsc:True,hqlp:False,tesm:0,bsrc:0,bdst:1,culm:0,dpts:2,wrdp:True,dith:0,ufog:True,aust:True,igpj:False,qofs:0,qpre:2,rntp:3,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.9558824,fgcg:0.5693123,fgcb:0.9292224,fgca:1,fgde:0.05,fgrn:0,fgrf:300,ofsf:0,ofsu:0,f2p0:False;n:type:ShaderForge.SFN_Final,id:1135,x:33733,y:32620,varname:node_1135,prsc:2|diff-2049-RGB,normal-7013-RGB,clip-9653-R,voffset-4184-OUT;n:type:ShaderForge.SFN_Tex2d,id:9653,x:33315,y:32740,ptovrint:False,ptlb:Transparancy,ptin:_Transparancy,varname:_Transparancy,prsc:2,tex:cb89008e708e4bc48a4368c06b3ff5fc,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Tex2d,id:7013,x:33142,y:32633,ptovrint:False,ptlb:node_7013,ptin:_node_7013,varname:_node_7013,prsc:2,tex:9e463e1043f31724387ef30c1c366525,ntxv:3,isnm:True;n:type:ShaderForge.SFN_Tex2d,id:2049,x:33319,y:32406,ptovrint:False,ptlb:texture,ptin:_texture,varname:_texture,prsc:2,tex:fc79468710d144c4f87cc6209aa1c4cc,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Slider,id:4216,x:32061,y:32347,ptovrint:False,ptlb:ShakeDistance,ptin:_ShakeDistance,varname:_ShakeDistance,prsc:2,min:0,cur:1.5,max:3;n:type:ShaderForge.SFN_Sin,id:5356,x:31887,y:32464,varname:node_5356,prsc:2|IN-2043-OUT;n:type:ShaderForge.SFN_ValueProperty,id:1094,x:31619,y:32522,ptovrint:False,ptlb:Intensity,ptin:_Intensity,varname:_Intensity,prsc:2,glob:False,v1:1;n:type:ShaderForge.SFN_ValueProperty,id:2834,x:31619,y:32646,ptovrint:False,ptlb:PlayerX,ptin:_PlayerX,varname:_PlayerX,prsc:2,glob:False,v1:1;n:type:ShaderForge.SFN_Vector1,id:6414,x:31619,y:32760,varname:node_6414,prsc:2,v1:0;n:type:ShaderForge.SFN_ValueProperty,id:3639,x:31619,y:32834,ptovrint:False,ptlb:PlayerZ,ptin:_PlayerZ,varname:_PlayerZ,prsc:2,glob:False,v1:1;n:type:ShaderForge.SFN_Append,id:6258,x:31956,y:32714,varname:node_6258,prsc:2|A-2834-OUT,B-6414-OUT,C-3639-OUT;n:type:ShaderForge.SFN_Multiply,id:4297,x:32759,y:32762,varname:node_4297,prsc:2|A-1094-OUT,B-2692-OUT,C-9558-R,D-5356-OUT,E-4216-OUT;n:type:ShaderForge.SFN_Normalize,id:2692,x:32214,y:32769,varname:node_2692,prsc:2|IN-6258-OUT;n:type:ShaderForge.SFN_Multiply,id:2043,x:31337,y:32818,varname:node_2043,prsc:2|A-117-OUT,B-5653-OUT;n:type:ShaderForge.SFN_VertexColor,id:9558,x:32247,y:33484,varname:node_9558,prsc:2;n:type:ShaderForge.SFN_Add,id:4184,x:33115,y:33054,varname:node_4184,prsc:2|A-4297-OUT,B-9082-OUT;n:type:ShaderForge.SFN_Slider,id:117,x:30469,y:32774,ptovrint:False,ptlb:ShakeSpeed,ptin:_ShakeSpeed,varname:_ShakeSpeed,prsc:2,min:0,cur:1,max:10;n:type:ShaderForge.SFN_Add,id:5653,x:31136,y:32977,varname:node_5653,prsc:2|A-2820-OUT,B-6924-OUT;n:type:ShaderForge.SFN_Subtract,id:2820,x:30823,y:32960,varname:node_2820,prsc:2|A-224-OUT,B-1583-T;n:type:ShaderForge.SFN_ValueProperty,id:224,x:30469,y:32940,ptovrint:False,ptlb:HitTime,ptin:_HitTime,varname:_HitTime,prsc:2,glob:False,v1:0;n:type:ShaderForge.SFN_Time,id:1583,x:30796,y:33360,varname:node_1583,prsc:2;n:type:ShaderForge.SFN_Slider,id:1657,x:30455,y:33264,ptovrint:False,ptlb:WindDistance,ptin:_WindDistance,varname:_WindDistance,prsc:2,min:0,cur:0.5,max:2;n:type:ShaderForge.SFN_Multiply,id:9082,x:32846,y:33185,varname:node_9082,prsc:2|A-2396-OUT,B-5919-OUT,C-9558-R,D-1657-OUT;n:type:ShaderForge.SFN_Add,id:595,x:31453,y:33353,varname:node_595,prsc:2|A-1583-T,B-6924-OUT;n:type:ShaderForge.SFN_Multiply,id:2942,x:31645,y:33446,varname:node_2942,prsc:2|A-595-OUT,B-8740-OUT;n:type:ShaderForge.SFN_Sin,id:5919,x:31868,y:33297,varname:node_5919,prsc:2|IN-2942-OUT;n:type:ShaderForge.SFN_Slider,id:8740,x:30866,y:33802,ptovrint:False,ptlb:WindSpeed,ptin:_WindSpeed,varname:_WindSpeed,prsc:2,min:0,cur:0,max:10;n:type:ShaderForge.SFN_Slider,id:100,x:31513,y:34079,ptovrint:False,ptlb:TimeOffset(G),ptin:_TimeOffsetG,varname:_TimeOffsetG,prsc:2,min:0,cur:2,max:3;n:type:ShaderForge.SFN_Multiply,id:6924,x:31909,y:33983,varname:node_6924,prsc:2|A-9558-G,B-100-OUT;n:type:ShaderForge.SFN_Vector1,id:3034,x:31394,y:33071,varname:node_3034,prsc:2,v1:1;n:type:ShaderForge.SFN_Append,id:4254,x:31643,y:33064,varname:node_4254,prsc:2|A-3034-OUT,B-1528-OUT,C-1528-OUT;n:type:ShaderForge.SFN_Normalize,id:2396,x:31889,y:33040,varname:node_2396,prsc:2|IN-4254-OUT;n:type:ShaderForge.SFN_Vector1,id:1528,x:31365,y:33170,varname:node_1528,prsc:2,v1:0;proporder:9653-7013-2049-100-8740-117-1657-4216-2834-3639-1094-224;pass:END;sub:END;*/
 
 Shader "Shader Forge/Foolige" {
     Properties {
         _Transparancy ("Transparancy", 2D) = "white" {}
         _node_7013 ("node_7013", 2D) = "bump" {}
         _texture ("texture", 2D) = "white" {}
-        _Intensity ("Intensity", Float ) = 0
-        _node_5136 ("node_5136", Float ) = 0
+        _TimeOffsetG ("TimeOffset(G)", Range(0, 3)) = 2
+        _WindSpeed ("WindSpeed", Range(0, 10)) = 0
+        _ShakeSpeed ("ShakeSpeed", Range(0, 10)) = 1
+        _WindDistance ("WindDistance", Range(0, 2)) = 0.5
+        _ShakeDistance ("ShakeDistance", Range(0, 3)) = 1.5
+        _PlayerX ("PlayerX", Float ) = 1
+        _PlayerZ ("PlayerZ", Float ) = 1
+        _Intensity ("Intensity", Float ) = 1
+        _HitTime ("HitTime", Float ) = 0
         [HideInInspector]_Cutoff ("Alpha cutoff", Range(0,1)) = 0.5
     }
     SubShader {
@@ -39,8 +46,15 @@ Shader "Shader Forge/Foolige" {
             uniform sampler2D _Transparancy; uniform float4 _Transparancy_ST;
             uniform sampler2D _node_7013; uniform float4 _node_7013_ST;
             uniform sampler2D _texture; uniform float4 _texture_ST;
+            uniform float _ShakeDistance;
             uniform float _Intensity;
-            uniform float _node_5136;
+            uniform float _PlayerX;
+            uniform float _PlayerZ;
+            uniform float _ShakeSpeed;
+            uniform float _HitTime;
+            uniform float _WindDistance;
+            uniform float _WindSpeed;
+            uniform float _TimeOffsetG;
             struct VertexInput {
                 float4 vertex : POSITION;
                 float3 normal : NORMAL;
@@ -66,8 +80,11 @@ Shader "Shader Forge/Foolige" {
                 o.normalDir = UnityObjectToWorldNormal(v.normal);
                 o.tangentDir = normalize( mul( _Object2World, float4( v.tangent.xyz, 0.0 ) ).xyz );
                 o.bitangentDir = normalize(cross(o.normalDir, o.tangentDir) * v.tangent.w);
-                float4 node_648 = _Time + _TimeEditor;
-                v.vertex.xyz += ((sin((mul(_Object2World, v.vertex).r+node_648.g))*_Intensity*o.vertexColor.rgb)*float3(o.uv0,_node_5136));
+                float3 node_2692 = normalize(float3(_PlayerX,0.0,_PlayerZ));
+                float4 node_1583 = _Time + _TimeEditor;
+                float node_6924 = (o.vertexColor.g*_TimeOffsetG);
+                float node_1528 = 0.0;
+                v.vertex.xyz += ((_Intensity*node_2692*o.vertexColor.r*sin((_ShakeSpeed*((_HitTime-node_1583.g)+node_6924)))*_ShakeDistance)+(normalize(float3(1.0,node_1528,node_1528))*sin(((node_1583.g+node_6924)*_WindSpeed))*o.vertexColor.r*_WindDistance));
                 o.posWorld = mul(_Object2World, v.vertex);
                 float3 lightColor = _LightColor0.rgb;
                 o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
@@ -129,8 +146,15 @@ Shader "Shader Forge/Foolige" {
             uniform sampler2D _Transparancy; uniform float4 _Transparancy_ST;
             uniform sampler2D _node_7013; uniform float4 _node_7013_ST;
             uniform sampler2D _texture; uniform float4 _texture_ST;
+            uniform float _ShakeDistance;
             uniform float _Intensity;
-            uniform float _node_5136;
+            uniform float _PlayerX;
+            uniform float _PlayerZ;
+            uniform float _ShakeSpeed;
+            uniform float _HitTime;
+            uniform float _WindDistance;
+            uniform float _WindSpeed;
+            uniform float _TimeOffsetG;
             struct VertexInput {
                 float4 vertex : POSITION;
                 float3 normal : NORMAL;
@@ -155,8 +179,11 @@ Shader "Shader Forge/Foolige" {
                 o.normalDir = UnityObjectToWorldNormal(v.normal);
                 o.tangentDir = normalize( mul( _Object2World, float4( v.tangent.xyz, 0.0 ) ).xyz );
                 o.bitangentDir = normalize(cross(o.normalDir, o.tangentDir) * v.tangent.w);
-                float4 node_648 = _Time + _TimeEditor;
-                v.vertex.xyz += ((sin((mul(_Object2World, v.vertex).r+node_648.g))*_Intensity*o.vertexColor.rgb)*float3(o.uv0,_node_5136));
+                float3 node_2692 = normalize(float3(_PlayerX,0.0,_PlayerZ));
+                float4 node_1583 = _Time + _TimeEditor;
+                float node_6924 = (o.vertexColor.g*_TimeOffsetG);
+                float node_1528 = 0.0;
+                v.vertex.xyz += ((_Intensity*node_2692*o.vertexColor.r*sin((_ShakeSpeed*((_HitTime-node_1583.g)+node_6924)))*_ShakeDistance)+(normalize(float3(1.0,node_1528,node_1528))*sin(((node_1583.g+node_6924)*_WindSpeed))*o.vertexColor.r*_WindDistance));
                 o.posWorld = mul(_Object2World, v.vertex);
                 float3 lightColor = _LightColor0.rgb;
                 o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
@@ -210,8 +237,15 @@ Shader "Shader Forge/Foolige" {
             #pragma target 3.0
             uniform float4 _TimeEditor;
             uniform sampler2D _Transparancy; uniform float4 _Transparancy_ST;
+            uniform float _ShakeDistance;
             uniform float _Intensity;
-            uniform float _node_5136;
+            uniform float _PlayerX;
+            uniform float _PlayerZ;
+            uniform float _ShakeSpeed;
+            uniform float _HitTime;
+            uniform float _WindDistance;
+            uniform float _WindSpeed;
+            uniform float _TimeOffsetG;
             struct VertexInput {
                 float4 vertex : POSITION;
                 float2 texcoord0 : TEXCOORD0;
@@ -220,16 +254,17 @@ Shader "Shader Forge/Foolige" {
             struct VertexOutput {
                 V2F_SHADOW_CASTER;
                 float2 uv0 : TEXCOORD1;
-                float4 posWorld : TEXCOORD2;
                 float4 vertexColor : COLOR;
             };
             VertexOutput vert (VertexInput v) {
                 VertexOutput o = (VertexOutput)0;
                 o.uv0 = v.texcoord0;
                 o.vertexColor = v.vertexColor;
-                float4 node_648 = _Time + _TimeEditor;
-                v.vertex.xyz += ((sin((mul(_Object2World, v.vertex).r+node_648.g))*_Intensity*o.vertexColor.rgb)*float3(o.uv0,_node_5136));
-                o.posWorld = mul(_Object2World, v.vertex);
+                float3 node_2692 = normalize(float3(_PlayerX,0.0,_PlayerZ));
+                float4 node_1583 = _Time + _TimeEditor;
+                float node_6924 = (o.vertexColor.g*_TimeOffsetG);
+                float node_1528 = 0.0;
+                v.vertex.xyz += ((_Intensity*node_2692*o.vertexColor.r*sin((_ShakeSpeed*((_HitTime-node_1583.g)+node_6924)))*_ShakeDistance)+(normalize(float3(1.0,node_1528,node_1528))*sin(((node_1583.g+node_6924)*_WindSpeed))*o.vertexColor.r*_WindDistance));
                 o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
                 TRANSFER_SHADOW_CASTER(o)
                 return o;
