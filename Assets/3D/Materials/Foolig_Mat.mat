@@ -57,7 +57,7 @@ Material:
       data:
         first:
           name: _Intensity
-        second: .00400000019
+        second: 0
       data:
         first:
           name: _Intesity
@@ -66,4 +66,36 @@ Material:
         first:
           name: _node_5136
         second: 1
+      data:
+        first:
+          name: _PlayerX
+        second: 1
+      data:
+        first:
+          name: _PlayerZ
+        second: 1
+      data:
+        first:
+          name: _ShakeDistance
+        second: .100000001
+      data:
+        first:
+          name: _ShakeSpeed
+        second: .699999988
+      data:
+        first:
+          name: _WindDistance
+        second: .0500000007
+      data:
+        first:
+          name: _WindSpeed
+        second: .600000024
+      data:
+        first:
+          name: _TimeOffsetG
+        second: 2
+      data:
+        first:
+          name: _HitTime
+        second: 0
     m_Colors: {}

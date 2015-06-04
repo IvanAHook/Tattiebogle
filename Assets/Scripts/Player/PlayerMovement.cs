@@ -64,12 +64,14 @@ public class PlayerMovement : MonoBehaviour {
             if (Vector3.Distance(transform.position, agent.destination) < 2f) {
                 interractTarget.GetComponent<Interactable>().Interact();
                 interract = false;
+                Halt();
             }
         }
 
         if (pickup && inventoryItem) {
             if (Vector3.Distance(transform.position, inventoryItem.position) < 2f) {
                 PickupItem();
+                Halt();
             }
         }
 
@@ -94,40 +96,45 @@ public class PlayerMovement : MonoBehaviour {
                 return;
             }
 
-            if (hitInfo.transform.gameObject.layer == 8 || hitInfo.transform.gameObject.layer == 10 || hitInfo.transform.gameObject.layer == 13) {
-                TargetHit(hitInfo.transform);
+            //if (hitInfo.transform.gameObject.layer == 8 || hitInfo.transform.gameObject.layer == 10 || hitInfo.transform.gameObject.layer == 13) {
+            //    TargetHit(hitInfo.transform);
 
-            }
+            //}
 
         }
 
     }
 
-    public void SetDestination(Vector3 destination) {
+    public void SetDestination(Transform target) {
+
         NavMeshPath path = new NavMeshPath();
-        agent.CalculatePath(destination, path);
+        agent.CalculatePath(target.position, path);
         if (path.status == NavMeshPathStatus.PathComplete) {
             agent.SetPath(path);
         } else {
             Halt();
         }
+
     }
 
     public void Halt() {
         agent.ResetPath();
     }
 
-    void TargetHit(Transform t) {
+    public void TargetHit(Transform t) {
+        Debug.Log(t.tag);
         if (t.tag == "Pickup") {
             pickup = true;
             t.GetComponent<Pickup>().PlayAnim();
             inventoryItem = t;
+            SetDestination(t);
             return;
         }
         if (t.tag == "Interactable") {
             interract = true;
             interractTarget = t;
-            agent.destination = t.GetComponent<Interactable>().interactTransform.position;
+            SetDestination(t.GetComponent<Interactable>().interactTransform);
+            //agent.destination = t.GetComponent<Interactable>().interactTransform.position;
             return;
         }
         pickup = false;

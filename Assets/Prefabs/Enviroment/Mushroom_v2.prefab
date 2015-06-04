@@ -41,7 +41,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: beddaecfff58d4d4c9b4d3b51eaff764, type: 2}
+  - {fileID: 2100000, guid: 48e730071e0ea424cb105eb8116af4dd, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -61,7 +61,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 188750}
-  m_Mesh: {fileID: 4300002, guid: 5e13d598d2e0bf64c8a388283fde71ed, type: 3}
+  m_Mesh: {fileID: 4300002, guid: daae6baafa93e4e40a993628f8f511c7, type: 3}
 --- !u!65 &6571812
 BoxCollider:
   m_ObjectHideFlags: 1
