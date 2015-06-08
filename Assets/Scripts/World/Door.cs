@@ -34,6 +34,7 @@ public class Door : Interactable {
 
         //blocker.transform.gameObject.SetActive(false);
         col.enabled = false;
+        GetComponent<NavMeshObstacle>().enabled = false;
         audioSource.PlayOneShot(sfxDoorOpen);
         //transform.DOMove (destination, 0.2f).SetEase (Ease.InOutCubic);
     }
