@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.EventSystems;
+using DG.Tweening;
 
 public class BlobAIPlayerBlobFall : MonoBehaviour 
 {
@@ -94,6 +95,7 @@ public class BlobAIPlayerBlobFall : MonoBehaviour
 			{
 				hasTripped = true;
 				Trip ();
+                transform.GetComponentInChildren<SkinnedMeshRenderer>().material.DOFloat(0.25f, "_Emission", 1f);
                 light.GetComponent<TestFlyingLight>().StartMoving();
 			}
 			blendSpeed = Mathf.Lerp (0, 1, agent.velocity.magnitude / agent.speed);
