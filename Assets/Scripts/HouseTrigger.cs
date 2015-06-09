@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using DG.Tweening;
 
 public class HouseTrigger : MonoBehaviour {
 
@@ -11,7 +12,7 @@ public class HouseTrigger : MonoBehaviour {
     void OnTriggerStay(Collider other) {
         if (other.transform.tag == "Player" && showing == true) {
             foreach (Transform wall in walls) {
-                wall.GetComponent<MeshRenderer>().material.SetFloat("_Opacity", 0.25f);
+                wall.GetComponent<MeshRenderer>().material.DOFloat(0.25f, "_Opacity", 1f);
             }
             showing = false;
         }
@@ -20,7 +21,7 @@ public class HouseTrigger : MonoBehaviour {
     void OnTriggerEnter(Collider other) {
         if (other.transform.tag == "Player" && showing == true) {
             foreach (Transform wall in walls) {
-                wall.GetComponent<MeshRenderer>().material.SetFloat("_Opacity", 0.25f);
+                wall.GetComponent<MeshRenderer>().material.DOFloat(0.25f, "_Opacity", 1f);
             }
             showing = false;
         }
@@ -29,7 +30,7 @@ public class HouseTrigger : MonoBehaviour {
     void OnTriggerExit(Collider other) {
         if (other.transform.tag == "Player" && showing == false) {
             foreach (Transform wall in walls) {
-                wall.GetComponent<MeshRenderer>().material.SetFloat("_Opacity", 1f);
+                wall.GetComponent<MeshRenderer>().material.DOFloat(1f, "_Opacity", 1f);
             }
             showing = true;
         }
