@@ -85,6 +85,12 @@ public class VegetationHit : MonoBehaviour {
 		Wobble (pushDir);
 
 	}
+
+	public void TriggerWobble() {
+		Vector3 pushDir = player.position - transform.position;
+		maxIntensity = PlayerPush;
+		Wobble (pushDir);
+	}
 	
 	public void Explosion (Vector3 exploPos, float dist)
 	{
