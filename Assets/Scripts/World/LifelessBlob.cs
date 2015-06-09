@@ -17,8 +17,9 @@ public class LifelessBlob : Interactable {
             transform.gameObject.layer = 14;
             transform.gameObject.tag = "Player";
             GetComponent<BoxCollider>().enabled = false;
-            //GetComponentInChildren<BlobAIPlayerBlobFall>().enabled = false;
+			GetComponentInChildren<BlobAIPlayerBlobFall>().RunAgain();
             GetComponentInChildren<PlayerBlobMovement>().enabled = true;
+
             //GetComponentInChildren<PlayerBlobMovement>().SetDestination(player.position);
             //GetComponentInChildren<BlobAI>().enabled = true;
         }
