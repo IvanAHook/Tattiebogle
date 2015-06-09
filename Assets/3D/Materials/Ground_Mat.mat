@@ -16,27 +16,6 @@ Material:
     m_TexEnvs:
       data:
         first:
-          name: _Texture
-        second:
-          m_Texture: {fileID: 2800000, guid: f0a8168310b10da4faedc474bb26c20f, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Grass_N
-        second:
-          m_Texture: {fileID: 2800000, guid: f0ec40764219f3f4787df1c70bacf45b, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _cLOUD
-        second:
-          m_Texture: {fileID: 2800000, guid: 5b93f489c923b8e478bc5fb8b4ffb0bd, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
           name: _Grass
         second:
           m_Texture: {fileID: 2800000, guid: f0a8168310b10da4faedc474bb26c20f, type: 3}
@@ -72,6 +51,55 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _N_GS
+        second:
+          m_Texture: {fileID: 2800000, guid: c4f0726c31ac3184abb0579373958d55, type: 3}
+          m_Scale: {x: 2, y: 2}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Wave
+        second:
+          m_Texture: {fileID: 2800000, guid: 5b93f489c923b8e478bc5fb8b4ffb0bd, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Foam
+        second:
+          m_Texture: {fileID: 2800000, guid: 78ba5a61463c5ac41a00492d6058799b, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _FoamMask
+        second:
+          m_Texture: {fileID: 2800000, guid: 9ba5c4c6b6b73f0469dcf5d2087f0718, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Texture
+        second:
+          m_Texture: {fileID: 2800000, guid: f0a8168310b10da4faedc474bb26c20f, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Grass_N
+        second:
+          m_Texture: {fileID: 2800000, guid: f0ec40764219f3f4787df1c70bacf45b, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _cLOUD
+        second:
+          m_Texture: {fileID: 2800000, guid: 5b93f489c923b8e478bc5fb8b4ffb0bd, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _t_Moss
         second:
           m_Texture: {fileID: 2800000, guid: 3fb06727ff1b77b47a394012b1326378, type: 3}
@@ -82,13 +110,6 @@ Material:
           name: _N_Moss
         second:
           m_Texture: {fileID: 2800000, guid: 32f9322402dcb1e45bf48725c0e97e07, type: 3}
-          m_Scale: {x: 2, y: 2}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _N_GS
-        second:
-          m_Texture: {fileID: 2800000, guid: c4f0726c31ac3184abb0579373958d55, type: 3}
           m_Scale: {x: 2, y: 2}
           m_Offset: {x: 0, y: 0}
       data:
@@ -177,26 +198,51 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Wave
+          name: _node_1556
         second:
-          m_Texture: {fileID: 2800000, guid: 5b93f489c923b8e478bc5fb8b4ffb0bd, type: 3}
+          m_Texture: {fileID: 2800000, guid: 46b6ac8dff412ba45a44510cf980a2a1, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Foam
-        second:
-          m_Texture: {fileID: 2800000, guid: 78ba5a61463c5ac41a00492d6058799b, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _FoamMask
+          name: _node_7701
         second:
           m_Texture: {fileID: 2800000, guid: 9ba5c4c6b6b73f0469dcf5d2087f0718, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _node_9133
+        second:
+          m_Texture: {fileID: 2800000, guid: 46b6ac8dff412ba45a44510cf980a2a1, type: 3}
+          m_Scale: {x: 6, y: 6}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _node_2045
+        second:
+          m_Texture: {fileID: 2800000, guid: 9ba5c4c6b6b73f0469dcf5d2087f0718, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _node_1604
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _t
+        second:
+          m_Texture: {fileID: 2800000, guid: 9ba5c4c6b6b73f0469dcf5d2087f0718, type: 3}
+          m_Scale: {x: .930000007, y: .930000007}
+          m_Offset: {x: .400000006, y: .400000006}
     m_Floats:
+      data:
+        first:
+          name: _Scale
+        second: 10
       data:
         first:
           name: _Speed2
@@ -222,3 +268,11 @@ Material:
         first:
           name: _FoamColor
         second: {r: .661764741, g: .661764741, b: .661764741, a: 1}
+      data:
+        first:
+          name: _node_7231
+        second: {r: .5, g: .5, b: .5, a: 1}
+      data:
+        first:
+          name: _Dots_Color
+        second: {r: .654411793, g: .685395479, b: 1, a: 1}
