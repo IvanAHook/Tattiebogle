@@ -19,9 +19,6 @@ public class BlobAI : MonoBehaviour
 	private float maxRandomIdle = 7;
 	bool hasFallen;
 
-	//private bool pushingUp;
-	//private bool 
-
 	private enum BlobAction {Idling,PushingUp,Moving}
 	private BlobAction myAction;
 
@@ -46,12 +43,6 @@ public class BlobAI : MonoBehaviour
 	}
 	void Update()
 	{
-#if UNITY_EDITOR
-		if (Input.GetKeyDown(KeyCode.P))
-		{
-			Trip();
-		}
-#endif
 		if (agent.velocity.magnitude<0.15f) 
 		{
 			anim.SetFloat(moveSpeedHash, 0f);

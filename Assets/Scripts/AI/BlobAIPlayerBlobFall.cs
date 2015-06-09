@@ -17,6 +17,8 @@ public class BlobAIPlayerBlobFall : MonoBehaviour
 	private int pushUpHash;
 	private int moveHash;
 	private int tripHash;
+	private int playerTripHash;
+	private int playerGetUpHash;
 	private float nextRandomIdle;
 	private float pushupTime;
 	private float minRandomIdle = 1;
@@ -42,6 +44,8 @@ public class BlobAIPlayerBlobFall : MonoBehaviour
 		LookAroundHash = Animator.StringToHash ("LookAround");
 		pushUpHash = Animator.StringToHash ("pushUp");
 		tripHash = Animator.StringToHash ("Trip");
+		playerTripHash = Animator.StringToHash ("PlayerTrip");
+		playerGetUpHash = Animator.StringToHash ("PlayerGetUp");
 		RandomTime ();
 		myAction = BlobAction.Idling;
 	}
@@ -116,15 +120,15 @@ public class BlobAIPlayerBlobFall : MonoBehaviour
 	}
 	private void Trip ()
 	{
-		anim.SetTrigger (tripHash);
+		anim.SetTrigger (playerTripHash);
 		agent.destination = transform.position+transform.forward*2;
 		hasFallen=true;
 		//Invoke ("RunAgain",2.5f);
 	}
 	
-	void RunAgain ()
+	public void RunAgain ()
 	{
-		agent.SetDestination (target.position);
+		anim.SetTrigger (playerGetUpHash);
 	}
 	
 	public void Trigger () 
