@@ -16,13 +16,6 @@ Material:
     m_TexEnvs:
       data:
         first:
-          name: _Normal
-        second:
-          m_Texture: {fileID: 2800000, guid: 278e24ae8d8a6b244a968f40b4eb9711, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
           name: _Texture
         second:
           m_Texture: {fileID: 2800000, guid: 8b95382807a1a7f42af1365449d8e5d4, type: 3}
@@ -30,7 +23,14 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _node_9584
+          name: _Normal
+        second:
+          m_Texture: {fileID: 2800000, guid: 278e24ae8d8a6b244a968f40b4eb9711, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Specular
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -44,7 +44,7 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Specular
+          name: _node_9584
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -53,7 +53,7 @@ Material:
       data:
         first:
           name: _value
-        second: 1
+        second: 1.05999994
       data:
         first:
           name: _Cutoff
@@ -65,5 +65,5 @@ Material:
       data:
         first:
           name: _fresnelstrength
-        second: .351000011
+        second: .460000008
     m_Colors: {}
