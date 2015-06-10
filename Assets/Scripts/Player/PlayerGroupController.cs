@@ -60,7 +60,7 @@ public class PlayerGroupController : MonoBehaviour {
             }
             if (hitInfo.transform.gameObject.layer == 8) {
                 if (activePlayer == ActivePlayer.Player) {
-                    player.SetDestination(hitInfo.transform);
+                    player.SetDestination(hitInfo.point);
                 } else if (activePlayer == ActivePlayer.Blob) {
                     playerBlob.SetDestination(hitInfo.transform.position);
                 }

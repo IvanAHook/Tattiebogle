@@ -105,10 +105,10 @@ public class PlayerMovement : MonoBehaviour {
 
     }
 
-    public void SetDestination(Transform target) {
+    public void SetDestination(Vector3 target) {
 
         NavMeshPath path = new NavMeshPath();
-        agent.CalculatePath(target.position, path);
+        agent.CalculatePath(target, path);
         if (path.status == NavMeshPathStatus.PathComplete) {
             agent.SetPath(path);
         } else {
@@ -126,14 +126,14 @@ public class PlayerMovement : MonoBehaviour {
             pickup = true;
             t.SendMessage("PlayAnim", SendMessageOptions.DontRequireReceiver);
             inventoryItem = t;
-            SetDestination(t);
+            SetDestination(t.position);
             return;
         }
         if (t.tag == "Interactable") {
             interract = true;
             interractTarget = t;
             t.SendMessage("PlayAnim", SendMessageOptions.DontRequireReceiver);
-            SetDestination(t.GetComponent<Interactable>().interactTransform);
+            SetDestination(t.GetComponent<Interactable>().interactTransform.position);
             //agent.destination = t.GetComponent<Interactable>().interactTransform.position;
             return;
         }
