@@ -6,6 +6,10 @@ public class LifelessBlob : Interactable {
 
     public Transform player;
 
+    void Update() {
+        //ProximityBrightness();
+    }
+
     public override void Interact(Transform item) {
         if (item.GetComponent<UiItem>().worldItem == interractItem) {
             Destroy(item.gameObject);
@@ -18,6 +22,14 @@ public class LifelessBlob : Interactable {
 
             //GetComponentInChildren<PlayerBlobMovement>().SetDestination(player.position);
             //GetComponentInChildren<BlobAI>().enabled = true;
+        }
+    }
+
+    void ProximityBrightness() {
+        if (Vector3.Distance(transform.position, interractItem.position) < 4f) {
+            transform.GetComponentInChildren<SkinnedMeshRenderer>().material.DOFloat(0.35f, "_Emission", 1f);
+        } else if (Vector3.Distance(transform.position, interractItem.position) > 4f) {
+            transform.GetComponentInChildren<SkinnedMeshRenderer>().material.DOFloat(0.25f, "_Emission", 1f);
         }
     }
 

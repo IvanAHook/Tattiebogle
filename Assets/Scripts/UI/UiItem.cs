@@ -18,6 +18,8 @@ public class UiItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 
     Transform target;
 
+    bool dragging = true;
+
     PlayerMovement playerMovement;
     PlayerGroupController playerGroupController;
 
@@ -32,9 +34,8 @@ public class UiItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 
     void Update() {
 
-        // dont do this in update
-        if (target && playerMovement.agent.remainingDistance < 0.25f) {
-            //Debug.Log(target.GetComponent<Interactable>());
+        // dont do this in update, and make better logic for this
+        if (target && playerMovement.agent.remainingDistance < 0.25f && Vector3.Distance(playerMovement.transform.position, target.GetComponent<Interactable>().interactTransform.position) < 1f) {
             target.GetComponent<Interactable>().Interact(transform);
             target = null;
             playerMovement.Halt();
@@ -43,10 +44,12 @@ public class UiItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
     }
 
     public void OnBeginDrag(PointerEventData eventData) {
+        UiHand.mouseExit += ShowWorldItem;
+        UiHand.mouseEnter += ShowIcon;
+        dragging = true;
 
         originalParent = transform.parent;
         transform.SetParent(transform.parent.parent);
-        //transform.GetComponent<Image>().enabled = false;
 
         RaycastHit hitInfo;
 
@@ -73,25 +76,14 @@ public class UiItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
             return;
         }
 
-        if (EventSystem.current.IsPointerOverGameObject()) {
-            Debug.Log("over ui");
-        }
-
-        if (hitInfo.transform.gameObject && !EventSystem.current.IsPointerOverGameObject()) {
-            ShowWorldItem();
-        } else {
-            ShowIcon();
-        }
-
         worldItem.position = GetMousePositionOnXY();
-
-        //if (hitInfo.transform.tag == "Intractable") {
-        //    worldItem.LookAt(hitInfo.transform);
-        //}
 
     }
 
     public void OnEndDrag(PointerEventData eventData) {
+        UiHand.mouseExit -= ShowWorldItem;
+        UiHand.mouseEnter -= ShowIcon;
+        dragging = false;
 
         RaycastHit hitInfo;
 
@@ -102,7 +94,6 @@ public class UiItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 
         // Dont continue if raycast does not hit anything!
         if (!Physics.Raycast(cam.ScreenPointToRay(Input.mousePosition), out hitInfo)) {
-            //GetComponent<Image>().sprite = sprite;
             return;
         }
         
@@ -149,5 +140,15 @@ public class UiItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
         }
 
     }
+
+    //void OnEnable() {
+    //        UiHand.mouseExit += ShowWorldItem;
+    //        UiHand.mouseEnter += ShowIcon;
+    //}
+
+    //void OnDisable() {
+    //        UiHand.mouseExit -= ShowWorldItem;
+    //        UiHand.mouseEnter -= ShowIcon;
+    //}
 
 }

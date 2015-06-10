@@ -80,11 +80,10 @@ Shader "Shader Forge/Foolige" {
                 o.normalDir = UnityObjectToWorldNormal(v.normal);
                 o.tangentDir = normalize( mul( _Object2World, float4( v.tangent.xyz, 0.0 ) ).xyz );
                 o.bitangentDir = normalize(cross(o.normalDir, o.tangentDir) * v.tangent.w);
-                float3 node_2692 = normalize(float3(_PlayerX,0.0,_PlayerZ));
                 float4 node_1583 = _Time + _TimeEditor;
                 float node_6924 = (o.vertexColor.g*_TimeOffsetG);
                 float node_1528 = 0.0;
-                v.vertex.xyz += ((_Intensity*node_2692*o.vertexColor.r*sin((_ShakeSpeed*((_HitTime-node_1583.g)+node_6924)))*_ShakeDistance)+(normalize(float3(1.0,node_1528,node_1528))*sin(((node_1583.g+node_6924)*_WindSpeed))*o.vertexColor.r*_WindDistance));
+                v.vertex.xyz += ((_Intensity*normalize(float3(_PlayerX,0.0,_PlayerZ))*o.vertexColor.r*sin((_ShakeSpeed*((_HitTime-node_1583.g)+node_6924)))*_ShakeDistance)+(normalize(float3(1.0,node_1528,node_1528))*sin(((node_1583.g+node_6924)*_WindSpeed))*o.vertexColor.r*_WindDistance));
                 o.posWorld = mul(_Object2World, v.vertex);
                 float3 lightColor = _LightColor0.rgb;
                 o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
@@ -179,11 +178,10 @@ Shader "Shader Forge/Foolige" {
                 o.normalDir = UnityObjectToWorldNormal(v.normal);
                 o.tangentDir = normalize( mul( _Object2World, float4( v.tangent.xyz, 0.0 ) ).xyz );
                 o.bitangentDir = normalize(cross(o.normalDir, o.tangentDir) * v.tangent.w);
-                float3 node_2692 = normalize(float3(_PlayerX,0.0,_PlayerZ));
                 float4 node_1583 = _Time + _TimeEditor;
                 float node_6924 = (o.vertexColor.g*_TimeOffsetG);
                 float node_1528 = 0.0;
-                v.vertex.xyz += ((_Intensity*node_2692*o.vertexColor.r*sin((_ShakeSpeed*((_HitTime-node_1583.g)+node_6924)))*_ShakeDistance)+(normalize(float3(1.0,node_1528,node_1528))*sin(((node_1583.g+node_6924)*_WindSpeed))*o.vertexColor.r*_WindDistance));
+                v.vertex.xyz += ((_Intensity*normalize(float3(_PlayerX,0.0,_PlayerZ))*o.vertexColor.r*sin((_ShakeSpeed*((_HitTime-node_1583.g)+node_6924)))*_ShakeDistance)+(normalize(float3(1.0,node_1528,node_1528))*sin(((node_1583.g+node_6924)*_WindSpeed))*o.vertexColor.r*_WindDistance));
                 o.posWorld = mul(_Object2World, v.vertex);
                 float3 lightColor = _LightColor0.rgb;
                 o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
@@ -260,11 +258,10 @@ Shader "Shader Forge/Foolige" {
                 VertexOutput o = (VertexOutput)0;
                 o.uv0 = v.texcoord0;
                 o.vertexColor = v.vertexColor;
-                float3 node_2692 = normalize(float3(_PlayerX,0.0,_PlayerZ));
                 float4 node_1583 = _Time + _TimeEditor;
                 float node_6924 = (o.vertexColor.g*_TimeOffsetG);
                 float node_1528 = 0.0;
-                v.vertex.xyz += ((_Intensity*node_2692*o.vertexColor.r*sin((_ShakeSpeed*((_HitTime-node_1583.g)+node_6924)))*_ShakeDistance)+(normalize(float3(1.0,node_1528,node_1528))*sin(((node_1583.g+node_6924)*_WindSpeed))*o.vertexColor.r*_WindDistance));
+                v.vertex.xyz += ((_Intensity*normalize(float3(_PlayerX,0.0,_PlayerZ))*o.vertexColor.r*sin((_ShakeSpeed*((_HitTime-node_1583.g)+node_6924)))*_ShakeDistance)+(normalize(float3(1.0,node_1528,node_1528))*sin(((node_1583.g+node_6924)*_WindSpeed))*o.vertexColor.r*_WindDistance));
                 o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
                 TRANSFER_SHADOW_CASTER(o)
                 return o;

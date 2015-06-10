@@ -5,8 +5,16 @@ public class Interactable  : MonoBehaviour {
 
     Animator animator;
 
+
+    //public Vector3 messageOffset;
+    public float messageDuration;
+    //public Sprite messageSprite;
+    //public UiPopupMessage message;
+
+    public SpeechBubble speechBubble;
+    SpeechBubble currentSpeechBubble;
+
     public Transform interractItem;
-    public Sprite messageSprite;
     public Transform interactTransform;
 
     void Start() {
@@ -22,12 +30,14 @@ public class Interactable  : MonoBehaviour {
     }
 
     public virtual void Interact() {
-//        if (messageSprite != null) {
-//            GameObject.Find("MessageHandler").GetComponentInChildren<MessageHandler>().AddMessage(transform, new Vector3(0f, 2f, 1f), messageSprite, 4f);
-//        }
+        if (currentSpeechBubble == null) {
+            currentSpeechBubble = Instantiate(speechBubble, transform.position, Quaternion.identity) as SpeechBubble;
+            currentSpeechBubble.messageDuration = messageDuration;
+        }
     }
 
     public virtual void Interact(Transform item) {
+
         //if (t.GetComponent<UiItem>().worldItem == item;) {
         //    Destroy(t.gameObject);
         //}

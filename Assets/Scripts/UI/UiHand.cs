@@ -4,15 +4,33 @@ using DG.Tweening;
 
 public class UiHand : MonoBehaviour {
 
+    public delegate void MouseExit();
+    public static MouseExit mouseExit;
+
+    public delegate void MouseEnter();
+    public static MouseEnter mouseEnter;
+
+
     public Transform player;
     public Transform heldItem;
 
     float hideDelay = 5f;
     float hideTimer = 0f;
 
+    bool didHoverLastFrame;
+
     public GameObject defaultItemPrefab;
 
     void Update() {
+
+        if (didHoverLastFrame && !ContainsMouse() && mouseExit != null) {
+            mouseExit();
+            didHoverLastFrame = false;
+        } else if (!didHoverLastFrame && ContainsMouse() && mouseEnter != null) {
+            mouseEnter();
+            didHoverLastFrame = true;
+        }
+
         hideTimer += Time.deltaTime;
         if (hideTimer >= hideDelay) {
             transform.DOMoveY(-76f, 0.5f);
@@ -34,6 +52,10 @@ public class UiHand : MonoBehaviour {
 
             item.gameObject.SetActive(false);
         }
+    }
+
+    bool ContainsMouse() {
+        return GetComponent<RectTransform>().rect.Contains(Input.mousePosition);
     }
 
     //public void DropHeldItem() {
