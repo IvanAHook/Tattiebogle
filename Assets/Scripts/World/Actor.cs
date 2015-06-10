@@ -6,22 +6,19 @@ public class Actor : MonoBehaviour {
     public Transform item;
     
     public Transform interactTransform; // come up with a better name...
-    
-    public Sprite messageSprite;
 
-//    public Transform[] bridge;
+    public Vector3 messageOffset;
+    public float messageDuration;
+    public Sprite messageSprite;
+    public UiPopupMessage message;
 
     public void Interact() {
-        GameObject.Find("MessageHandler").GetComponentInChildren<MessageHandler>().AddMessage(transform, new Vector3(0f, 2f, 1f), messageSprite, 4f);
+        message.NewMessage(transform, messageOffset, messageSprite, messageDuration);
+        //GameObject.Find("MessageHandler").GetComponentInChildren<MessageHandler>().AddMessage(transform, new Vector3(0f, 2f, 1f), messageSprite, 4f);
     }
 
 	void ItemInteract(Transform t){
-//		if (t.GetComponent<UiItem>().worldItem == item) {
-//            Destroy(t.gameObject);
-//            foreach (Transform i in bridge) {
-//                i.gameObject.SetActive(true);
-//            }
-//		}
+
 	}
 
     public Vector3 GetInteractPosition() {

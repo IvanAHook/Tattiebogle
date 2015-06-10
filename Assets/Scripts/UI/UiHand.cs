@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using DG.Tweening;
 
 public class UiHand : MonoBehaviour {
@@ -12,7 +13,7 @@ public class UiHand : MonoBehaviour {
 
 
     public Transform player;
-    public Transform heldItem;
+    public List<Transform> heldItems;
 
     float hideDelay = 5f;
     float hideTimer = 0f;
@@ -39,16 +40,19 @@ public class UiHand : MonoBehaviour {
     }
 
     public void PickupItem(Transform item) {
+        Debug.Log(item.GetComponent<Pickup>().sprite.name);
         if (item.GetComponent<Pickup>()) {
-            heldItem = ((GameObject)Instantiate(defaultItemPrefab, Vector3.zero, Quaternion.identity)).transform;
-            heldItem.GetComponent<UiItem>().sprite = item.GetComponent<Pickup>().sprite;
-            heldItem.GetComponent<UiItem>().worldItem = item.GetComponent<Pickup>().worldItem;
-            heldItem.GetComponent<UiItem>().worldItem.position = player.position;
-            heldItem.GetComponent<UiItem>().worldItem.gameObject.layer = 11;
-            foreach (Transform i in heldItem.GetComponent<UiItem>().worldItem.GetComponentsInChildren<Transform>()) {
+            Transform newItem = ((GameObject)Instantiate(defaultItemPrefab, Vector3.zero, Quaternion.identity)).transform;
+            newItem.GetComponent<UiItem>().sprite = item.GetComponent<Pickup>().sprite;
+            newItem.GetComponent<UiItem>().worldItem = item.GetComponent<Pickup>().worldItem;
+            newItem.GetComponent<UiItem>().worldItem.position = player.position;
+            newItem.GetComponent<UiItem>().worldItem.gameObject.layer = 11;
+            foreach (Transform i in newItem.GetComponent<UiItem>().worldItem.GetComponentsInChildren<Transform>()) {
                 i.gameObject.layer = 11; 
-        	} 
-            heldItem.SetParent(transform);
+        	}
+            newItem.SetParent(transform);
+
+            heldItems.Add(newItem);
 
             item.gameObject.SetActive(false);
         }

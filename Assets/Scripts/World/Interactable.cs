@@ -17,6 +17,9 @@ public class Interactable  : MonoBehaviour {
     public Transform interractItem;
     public Transform interactTransform;
 
+    public AudioClip interractSound;
+    AudioSource audioSource;
+
     void Start() {
         if (animator) {
             animator = gameObject.GetComponentInChildren<Animator>();
@@ -30,7 +33,7 @@ public class Interactable  : MonoBehaviour {
     }
 
     public virtual void Interact() {
-        if (currentSpeechBubble == null) {
+        if (currentSpeechBubble == null && speechBubble != null) {
             currentSpeechBubble = Instantiate(speechBubble, transform.position, Quaternion.identity) as SpeechBubble;
             currentSpeechBubble.messageDuration = messageDuration;
         }
