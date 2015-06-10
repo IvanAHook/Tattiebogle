@@ -37,6 +37,20 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _Texture
+        second:
+          m_Texture: {fileID: 2800000, guid: 89caa4968bdd5354998e17e4fb186cb1, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Normal
+        second:
+          m_Texture: {fileID: 2800000, guid: 1cfac8d7cd391cd46b58fa8106209a54, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _ParallaxMap
         second:
           m_Texture: {fileID: 0}
@@ -93,16 +107,23 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Texture
+          name: _node_1556
         second:
-          m_Texture: {fileID: 2800000, guid: 89caa4968bdd5354998e17e4fb186cb1, type: 3}
+          m_Texture: {fileID: 2800000, guid: 46b6ac8dff412ba45a44510cf980a2a1, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Normal
+          name: _nN_Moss
         second:
-          m_Texture: {fileID: 2800000, guid: 1cfac8d7cd391cd46b58fa8106209a54, type: 3}
+          m_Texture: {fileID: 2800000, guid: 32f9322402dcb1e45bf48725c0e97e07, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _T_Moss
+        second:
+          m_Texture: {fileID: 2800000, guid: 3fb06727ff1b77b47a394012b1326378, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -120,8 +141,8 @@ Material:
         second: 0
       data:
         first:
-          name: _Metallic
-        second: 0
+          name: _Opacity
+        second: 1
       data:
         first:
           name: _Parallax
@@ -160,8 +181,8 @@ Material:
         second: 0
       data:
         first:
-          name: _Opacity
-        second: 1
+          name: _Metallic
+        second: 0
     m_Colors:
       data:
         first:
@@ -175,3 +196,7 @@ Material:
         first:
           name: _EmissionColorUI
         second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _node_6812
+        second: {r: .845588207, g: 0, b: 0, a: 1}
