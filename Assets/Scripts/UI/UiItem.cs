@@ -11,10 +11,14 @@ public class UiItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
     Transform tempWorldItem;
     public Sprite sprite;
 
+    GameObject placeholder = null;
     Transform originalParent;
     Camera cam;
 
     public Transform spawnItemParent;
+
+    public AudioClip clickSound;
+    AudioSource audioSource;
 
     Transform target;
 
@@ -29,6 +33,7 @@ public class UiItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
         GetComponent<Image>().sprite = sprite;
         playerMovement = GameObject.Find("Player").GetComponent<PlayerMovement>();
         playerGroupController = GameObject.Find("Player_Group").GetComponent<PlayerGroupController>();
+        audioSource = GetComponent<AudioSource>();
 
     }
 
@@ -47,6 +52,20 @@ public class UiItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
         UiHand.mouseExit += ShowWorldItem;
         UiHand.mouseEnter += ShowIcon;
         dragging = true;
+
+        if (clickSound != null) {
+            audioSource.PlayOneShot(clickSound);
+        }
+
+        placeholder = new GameObject();
+        placeholder.transform.SetParent(transform.parent);
+        LayoutElement le = placeholder.AddComponent<LayoutElement>();
+        le.preferredWidth = GetComponent<LayoutElement>().preferredWidth;
+        le.preferredHeight = GetComponent<LayoutElement>().preferredHeight;
+        le.flexibleWidth = 0;
+        le.flexibleHeight = 0;
+
+        placeholder.transform.SetSiblingIndex(transform.GetSiblingIndex());
 
         originalParent = transform.parent;
         transform.SetParent(transform.parent.parent);
@@ -91,6 +110,9 @@ public class UiItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 
         transform.GetComponent<RectTransform>().localScale = new Vector3(1f, 1f, 1f);
         transform.SetParent(originalParent);
+        transform.SetSiblingIndex(placeholder.transform.GetSiblingIndex());
+
+        Destroy(placeholder);
 
         // Dont continue if raycast does not hit anything!
         if (!Physics.Raycast(cam.ScreenPointToRay(Input.mousePosition), out hitInfo)) {
@@ -99,7 +121,7 @@ public class UiItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
         
         if (hitInfo.transform.tag == "Interactable") {
             target = hitInfo.transform;
-            playerMovement.SetDestination(target.GetComponent<Interactable>().GetInteractPosition());
+            playerMovement.SetDestination(target.GetComponent<Interactable>().GetInteractPosition().position);
         }
 
     }
