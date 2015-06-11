@@ -5,19 +5,21 @@ using DG.Tweening;
 public class Door : Interactable {
 
     public AudioClip sfxDoorOpen;
-    AudioSource audioSource;
 
 	public BoxCollider col;
+
+    bool opened = false;
 
     //public Transform blocker;
 
 	void Start () {
-        audioSource = GetComponent<AudioSource>();
+        base.audioSource = GetComponent<AudioSource>();
 	}
 
     public override void Interact() {
-        if (interractItem == null) {
+        if (interractItem == null && !opened) {
             OpenDoor();
+            opened = true;
         }
     }
 
@@ -33,7 +35,7 @@ public class Door : Interactable {
         transform.DORotate(new Vector3(0f, -90f, 0f), 1f);
 
         //blocker.transform.gameObject.SetActive(false);
-        col.enabled = false;
+        //col.enabled = false;
         GetComponent<NavMeshObstacle>().enabled = false;
         audioSource.PlayOneShot(sfxDoorOpen);
         //transform.DOMove (destination, 0.2f).SetEase (Ease.InOutCubic);

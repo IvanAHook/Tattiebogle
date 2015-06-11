@@ -10,7 +10,7 @@ public class UiPopupMessage : MonoBehaviour {
     Sprite messageSprite;
     float messageDuration;
 
-    bool showMessage = false;
+    bool showMessage = true;
     float currentTime;
 
     Camera cam;
@@ -25,7 +25,7 @@ public class UiPopupMessage : MonoBehaviour {
         if (messageSprite) {
             transform.GetComponentInChildren<Image>().sprite = messageSprite;
         } else {
-            showMessage = false;
+            //showMessage = false;
         }
 	
 	}
@@ -40,14 +40,16 @@ public class UiPopupMessage : MonoBehaviour {
 
         if (showMessage && transform.GetComponentInChildren<Image>().enabled == false) {
             transform.GetComponentInChildren<Image>().sprite = messageSprite;
+            //transform.GetComponentInChildren<SpriteRenderer>().enabled = true; 
             transform.GetComponentInChildren<Image>().enabled = true; 
             currentTime = Time.time;
         } else if (!showMessage && transform.GetComponentInChildren<Image>().enabled == true) {
-             transform.GetComponentInChildren<Image>().enabled = false;            
+             //transform.GetComponentInChildren<SpriteRenderer>().enabled = false;
+             //transform.GetComponentInChildren<Image>().enabled = false;   
         }
 
         if (Time.time - currentTime >= messageDuration) {
-            showMessage = false;
+            //showMessage = false;
         }
 	
 	}

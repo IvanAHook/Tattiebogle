@@ -19,7 +19,6 @@ public class VegetationHit : MonoBehaviour {
 	private int playerX;
 	private int playerZ;
 	private int hitTime;
-	private Transform player;
 	
 	float maxIntensity = 1;
 	
@@ -33,7 +32,6 @@ public class VegetationHit : MonoBehaviour {
 		hitTime = Shader.PropertyToID ("_HitTime");
 		startWobble = mat.GetFloat (wobbleID);
 		currentWobble = startWobble;
-		player = GameObject.FindGameObjectWithTag ("Player").transform;
 	}
 	
 	void Update () 
@@ -78,16 +76,16 @@ public class VegetationHit : MonoBehaviour {
 		mat.SetFloat (hitTime, Time.time);
 	}
 	
-	void OnTriggerEnter()
+	void OnTriggerEnter(Collider other)
 	{
-		Vector3 pushDir = player.position-transform.position;
+		Vector3 pushDir = other.transform.position - transform.position;
 		maxIntensity = PlayerPush;
 		Wobble (pushDir);
 
 	}
 
-	public void TriggerWobble() {
-		Vector3 pushDir = player.position - transform.position;
+	public void TriggerWobble(Vector3 pos) {
+		Vector3 pushDir = pos - transform.position;
 		maxIntensity = PlayerPush;
 		Wobble (pushDir);
 	}
