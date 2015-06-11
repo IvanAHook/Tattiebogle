@@ -83,9 +83,12 @@ public class BlobAI : MonoBehaviour
 				anim.SetTrigger (moveHash);
 				anim.SetBool (pushUpHash, false);
 			}
-			if (agent.pathStatus==NavMeshPathStatus.PathComplete)
+			if (agent.remainingDistance < 1f)
 			{
 				myAction=BlobAction.Idling;
+                if (transform.parent.tag != "Player") {
+                    Destroy(transform.parent.gameObject);
+                }
 			}
 			blendSpeed = Mathf.Lerp (0, 1, agent.velocity.magnitude / agent.speed);
 			anim.SetFloat(moveSpeedHash, blendSpeed);

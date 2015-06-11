@@ -5,19 +5,21 @@ using DG.Tweening;
 public class Door : Interactable {
 
     public AudioClip sfxDoorOpen;
-    AudioSource audioSource;
 
 	public BoxCollider col;
+
+    bool opened = false;
 
     //public Transform blocker;
 
 	void Start () {
-        audioSource = GetComponent<AudioSource>();
+        base.audioSource = GetComponent<AudioSource>();
 	}
 
     public override void Interact() {
-        if (interractItem == null) {
+        if (interractItem == null && !opened) {
             OpenDoor();
+            opened = true;
         }
     }
 
