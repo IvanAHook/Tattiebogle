@@ -49,6 +49,7 @@ public class TestFlyingLight : MonoBehaviour {
 
     public void StartMoving() {
         startMoving = true;
+        light.gameObject.SetActive(true);
     }
 
 }

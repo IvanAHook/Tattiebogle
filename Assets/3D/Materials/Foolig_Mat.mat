@@ -16,13 +16,6 @@ Material:
     m_TexEnvs:
       data:
         first:
-          name: _node_9653
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
           name: _Transparancy
         second:
           m_Texture: {fileID: 2800000, guid: cb89008e708e4bc48a4368c06b3ff5fc, type: 3}
@@ -37,16 +30,23 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _node_2049
+          name: _texture
+        second:
+          m_Texture: {fileID: 2800000, guid: fc79468710d144c4f87cc6209aa1c4cc, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _node_9653
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _texture
+          name: _node_2049
         second:
-          m_Texture: {fileID: 2800000, guid: fc79468710d144c4f87cc6209aa1c4cc, type: 3}
+          m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -56,16 +56,24 @@ Material:
         second: .5
       data:
         first:
-          name: _Intensity
-        second: 0
+          name: _TimeOffsetG
+        second: 1.66999996
       data:
         first:
-          name: _Intesity
-        second: .00300000003
+          name: _WindSpeed
+        second: .75
       data:
         first:
-          name: _node_5136
-        second: 1
+          name: _ShakeSpeed
+        second: .0700000003
+      data:
+        first:
+          name: _WindDistance
+        second: .0299999993
+      data:
+        first:
+          name: _ShakeDistance
+        second: .125
       data:
         first:
           name: _PlayerX
@@ -76,26 +84,18 @@ Material:
         second: 1
       data:
         first:
-          name: _ShakeDistance
-        second: .100000001
-      data:
-        first:
-          name: _ShakeSpeed
-        second: .699999988
-      data:
-        first:
-          name: _WindDistance
-        second: .0500000007
-      data:
-        first:
-          name: _WindSpeed
-        second: .600000024
-      data:
-        first:
-          name: _TimeOffsetG
-        second: 2
+          name: _Intensity
+        second: 0
       data:
         first:
           name: _HitTime
         second: 0
+      data:
+        first:
+          name: _Intesity
+        second: .00300000003
+      data:
+        first:
+          name: _node_5136
+        second: 1
     m_Colors: {}

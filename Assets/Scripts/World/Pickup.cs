@@ -13,8 +13,9 @@ public class Pickup : MonoBehaviour {
 	public int shakeVibrato;
 	public float shakeRandomness;
 
-	Vector3 startPos;
+	protected Vector3 startPos;
 	bool playingAnim = false;
+
 
 	void Start (){
 		startPos = transform.position;

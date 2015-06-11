@@ -17,7 +17,7 @@ public class SpeechBubble : MonoBehaviour {
 
         transform.localScale = Vector3.zero;
 
-        transform.DOScale(Vector3.one, scaleDuration);
+        transform.DOScale(Vector3.one, scaleDuration).SetEase(Ease.OutBack);
 
         StartCoroutine(Remove());
 
@@ -25,7 +25,7 @@ public class SpeechBubble : MonoBehaviour {
 
     IEnumerator Remove() {
         yield return new WaitForSeconds(messageDuration - scaleDuration);
-        transform.DOScale(Vector3.zero, scaleDuration);
+        transform.DOScale(Vector3.zero, scaleDuration).SetEase(Ease.InBack);
         Destroy(gameObject, scaleDuration);
     }
 
