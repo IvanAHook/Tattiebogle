@@ -1,6 +1,10 @@
 fileFormatVersion: 2
 guid: 2d71ec37d77352141b82dfae44f426ad
+<<<<<<< HEAD
 timeCreated: 1434024875
+=======
+timeCreated: 1434017569
+>>>>>>> 46e9379bfec2f76419ab80fda1035a3e57ec83ca
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -12,6 +16,7 @@ TextureImporter:
     21300010: SpriteSheetBig_T_5
     21300012: SpriteSheetBig_T_6
     21300014: SpriteSheetBig_T_7
+<<<<<<< HEAD
     21300016: SpriteSheetBig_T_8
     21300018: SpriteSheetBig_T_9
     21300020: SpriteSheetBig_T_10
@@ -132,6 +137,8 @@ TextureImporter:
     21300250: SpriteSheetBig_T_125
     21300252: SpriteSheetBig_T_126
     21300254: SpriteSheetBig_T_127
+=======
+>>>>>>> 46e9379bfec2f76419ab80fda1035a3e57ec83ca
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -257,6 +264,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+<<<<<<< HEAD
     - name: SpriteSheetBig_T_8
       rect:
         serializedVersion: 2
@@ -1457,6 +1465,8 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+=======
+>>>>>>> 46e9379bfec2f76419ab80fda1035a3e57ec83ca
   spritePackingTag: 
   userData: 
   assetBundleName: 
