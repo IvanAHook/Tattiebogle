@@ -415,10 +415,7 @@ GameObject:
   - 114: {fileID: 11420608}
   - 82: {fileID: 8225266}
   - 65: {fileID: 6552040}
-  - 114: {fileID: 11422052}
-  - 114: {fileID: 11410940}
-  - 114: {fileID: 11420338}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Blob_Animations_Bundle
   m_TagString: Interactable
   m_Icon: {fileID: 0}
@@ -695,9 +692,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 412158}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: Blobby
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1475,73 +1472,19 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
---- !u!114 &11410940
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 161374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc36966ef1a8fb1499ab54d43872b82b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 446384}
-  agent: {fileID: 19505208}
-  light: {fileID: 435598}
---- !u!114 &11420338
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 161374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34a6d3cdf8a4f0a46a08a081a74a04bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  messageDuration: 4
-  speechBubble: {fileID: 11484586, guid: 2024149ff37589e40a359bb9f9de9fae, type: 2}
-  interractItem: {fileID: 0}
-  interactTransform: {fileID: 0}
-  interractSound: {fileID: 0}
-  player: {fileID: 0}
 --- !u!114 &11420608
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 161374}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2956d04e2ac49ac43a8ba6888504c5c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 446384}
   agent: {fileID: 19505208}
---- !u!114 &11422052
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 161374}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd4fea18941a75d4d83d78d9565d2c0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  footsteps:
-  - {fileID: 8300000, guid: 7dc58526c287a244993b2adf25e4288f, type: 3}
-  - {fileID: 8300000, guid: 64ff0ef50d4025b459678ee8e0b6a5ce, type: 3}
-  - {fileID: 8300000, guid: 5135ec514827c0e43a6533a056008118, type: 3}
-  - {fileID: 8300000, guid: 6b9889f269c0f9e4f82421036a22d44c, type: 3}
-  - {fileID: 8300000, guid: 9416d63c2a0920948b6db55e5cefdb7f, type: 3}
-  - {fileID: 8300000, guid: e0beee5b53acb0c47af2d04d8b741b7c, type: 3}
-  footDelay: .600000024
-  active: 0
-  isMoving: 0
-  speed: 100
-  player: {fileID: 0}
 --- !u!114 &11435912
 MonoBehaviour:
   m_ObjectHideFlags: 1
