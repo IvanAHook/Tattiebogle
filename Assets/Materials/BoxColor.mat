@@ -7,8 +7,8 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: BoxColor
-  m_Shader: {fileID: 4800000, guid: 2653b6548eb668f4f9e7a282dc80d546, type: 3}
-  m_ShaderKeywords: _HIGHLIGHT_ON
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -92,10 +92,6 @@ Material:
         second: 0
       data:
         first:
-          name: _Metallic
-        second: 0
-      data:
-        first:
           name: _Parallax
         second: .0199999996
       data:
@@ -132,12 +128,8 @@ Material:
         second: 0
       data:
         first:
-          name: _FresnelExponent
-        second: .620000005
-      data:
-        first:
-          name: _Highlight
-        second: 1
+          name: _Metallic
+        second: 0
     m_Colors:
       data:
         first:
@@ -146,7 +138,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .45588237, g: .264929622, b: .0603373758, a: 1}
+        second: {r: .382352948, g: 1, b: .923326612, a: 1}
       data:
         first:
           name: _EmissionColorUI

@@ -3,9 +3,9 @@ using System.Collections;
 
 public class GroupVegetationHit : MonoBehaviour {
 
-	void OnTriggerEnter(Collider other) {
+	void OnTriggerEnter() {
 		foreach (Transform child in transform) {
-			child.SendMessage("TriggerWobble", other.transform.position, SendMessageOptions.DontRequireReceiver);
+			child.SendMessage("TriggerWobble", SendMessageOptions.DontRequireReceiver);
 		}
 	}
 

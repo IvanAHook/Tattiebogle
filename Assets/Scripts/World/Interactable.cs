@@ -18,7 +18,7 @@ public class Interactable  : MonoBehaviour {
     public Transform interactTransform;
 
     public AudioClip interractSound;
-    protected AudioSource audioSource;
+    AudioSource audioSource;
 
     void Start() {
         if (animator) {

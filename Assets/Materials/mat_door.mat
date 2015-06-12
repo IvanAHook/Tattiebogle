@@ -138,14 +138,6 @@ Material:
         first:
           name: _node_5100
         second: 0
-      data:
-        first:
-          name: _node_5355
-        second: .280000001
-      data:
-        first:
-          name: _FresnelExponent
-        second: .782000005
     m_Colors:
       data:
         first:
@@ -154,7 +146,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .382352948, g: .33504355, b: .210856408, a: .776470602}
+        second: {r: .382352948, g: .33504355, b: .210856408, a: 1}
       data:
         first:
           name: _EmissionColorUI

@@ -25,9 +25,6 @@ public class BlobAIPlayerBlobFall : MonoBehaviour
 	private float maxRandomIdle = 7;
 	bool hasFallen;
 	bool hasTripped;
-
-    private const string emissionID = "_Emission";
-    private Material mat;
 	
 	//private bool pushingUp;
 	//private bool 
@@ -51,8 +48,6 @@ public class BlobAIPlayerBlobFall : MonoBehaviour
 		playerGetUpHash = Animator.StringToHash ("PlayerGetUp");
 		RandomTime ();
 		myAction = BlobAction.Idling;
-
-        mat = transform.GetComponentInChildren<SkinnedMeshRenderer>().material;
 	}
 	float RandomTime ()
 	{
@@ -104,7 +99,7 @@ public class BlobAIPlayerBlobFall : MonoBehaviour
 			{
 				hasTripped = true;
 				Trip ();
-                mat.DOFloat(0.25f, emissionID, 1f);
+                transform.GetComponentInChildren<SkinnedMeshRenderer>().material.DOFloat(0.25f, "_Emission", 1f);
                 light.GetComponent<TestFlyingLight>().StartMoving();
 			}
 			blendSpeed = Mathf.Lerp (0, 1, agent.velocity.magnitude / agent.speed);
